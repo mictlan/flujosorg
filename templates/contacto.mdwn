@@ -1,0 +1,19 @@
+<h1>Comunica con Nosotros</h1>
+<span class="<TMPL_VAR align>">
+<img src="http://www.openclipart.org/image/800px/svg_to_png/Satellite2_iss_activity_sheet_p1.png" width="200px" class="left"/>
+<TMPL_IF correo>
+<h3>Correo Elecronico:</h3>
+<TMPL_VAR correo>
+</TMPL_IF>
+<TMPL_IF jabber>
+<h3>Lista de correo:</h3> para subscribir a la lista el direccion es <a href="<TMPL_VAR lista>"><TMPL_VAR lista></a>
+</TMPL_IF>
+
+<TMPL_IF ircs>
+<h3>En IRC:</h3> <b>servidor:</b> <TMPL_VAR ircs>, <b>canal:</b> #<TMPL_VAR ircc>
+</TMPL_IF>
+<TMPL_IF jabber>
+<h3>En Jabber:</h3> <TMPL_VAR jabber>
+</TMPL_IF>
+</span>
+

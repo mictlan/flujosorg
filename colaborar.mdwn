@@ -1,0 +1,16 @@
+#Colaborar en flujos.org
+
+
+Tu puedes participar en la comunidad de radio.flujos.org de tres maneras:
+
+##1. En la comunidad de l@s usuarios del Live-CD flujos-vivo
+
+Nos comunicamos a través de una <a href="https://lists.aktivix.org/mailman/listinfo/flujosvivos">lista de correos</a> donde se intercambian preguntas, ideas y crítcias sobre flujos-vivos y streaming de audio.Aquí nos juntamos todxs, desde nuevxs usuarixs con poca experiencia hasta lxs contribuidorxs más antiguxs del proyecto. Si quieres empezar a utilizar el Live-CD flujos-vivos, compartir tus experiencias o ayudar  otrxs usuarixs, esta lista es la plataforma para estar.
+
+##2. En la comunidad de lxs desarolladores de nuevas versiones del Live-CD flujos-vivo
+
+La plataforma flujos.org es un esfuerzo colaborativo mantenido en ikiwiki, un compilador de html, que utiliza git como motor. Cada unx de nosotrxs contribuye de su manera: programación, investigación de software, edición de manuales, traducciones, diseño gráfico y la administración de la página web. Te interesa? [[Aqui puedes ver como colaborar|edita]]
+
+##3. Como usuario en flujos.org/wiki 
+
+En el wiki estamos evaluando el funcionamiento de <i>flujos-vivo</i> y documentando nuevas programas para editar y transmitir audio. Registrándote como usuario en el wiki puedes compartir tus experiencias o editar mini-manuales. [[Aqui vas al wiki|index]].

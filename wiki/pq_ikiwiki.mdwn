@@ -1,0 +1,23 @@
+# Porque ikiwiki
+
+Esta pagina es para explorar las posibilidades que nos brinda ikiwiki.
+
+## Sistema de Ficheros Local
+
+Lo contenidos del wiki no existe un un misterio base de datos como en los CMS por lo general. Sino en la sistema de ficheros. Lo cual significa que tenemos todo las utilidades disponibles en linux para trabajar en la sitema de ficheros. Que la sistema es distruibido, podemos clonar a nuestra maquina los datos y trabajar en la sistema que tenemos acomodado a nuestros gustos. Y para incluir algo en nuestra wiki es nada mas copiarlo a la carpeta indicado. 
+
+Un ejemplo de un uso intersante seria tener una carpeta en lo cual guardamos produccion de audio. incluimos esta carpeta en nuestra repositorio, y agregamos una linea a una pagina en el wiki, y tenemos un podcast. 
+
+## DMS
+
+Has oido del CMS, o manejador de contenidos. Git es un DMS, diretory management system, o manajedor de los contenidos de carpetas. Lo que hace, esencialmente, es convertir una carpeta y los subcarpetas en una especia de base de datos distruibuido por la red. Proporciona revisiones, el possiblilidad de deshacer cambios, clonar copias, modificar y unicr dos ramas del mismo proyectos y resolver conflictos entre cambios. 
+
+## Markdown
+
+Markdown es un sintaxis para edicion de documentos en base de un numero reducido de opciones de html. Es mucho mas facil aprender markdown, pero tambien menos poderoso. Por suerte ikwiki permita complementar el markdown con html en los casos que es demaisada limitada. 
+
+## Systema Distruibuida
+
+Podemos utilizar git para mantener dos paginas autonomos pero sincronizadas. Si uno ya no esta la otra sigue. Y cuando si puede y quiere si pueden actualizarsi entre los dos. Estos actualizaciones pueden ser automatizadas. 
+
+<http://ikiwiki.info/tips/distributed_wikis/>

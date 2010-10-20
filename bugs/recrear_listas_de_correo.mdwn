@@ -1,0 +1,9 @@
+reponer las listas de correos
+
+[[hecho]]
+ahora tenemos una unica lista:
+<https://lists.aktivix.org/mailman/listinfo/flujosvivos>
+
+>
+>  * laboratorios@ para el desarollo de flujos-vivos
+>  * radio@ para discussion entre usuarios de flujos-vivos y SL/radio. 

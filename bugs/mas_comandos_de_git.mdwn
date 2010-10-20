@@ -1,0 +1,5 @@
+> existe el ficheros. y el enlaze funciona localmente. pero en el servidor no aparece en enlace sino texto normal. 
+>
+> ver: <http://flujos.local/edita/>
+
+alparecer un actualizcacion de ikiwiki resolvio esta. marcando como [[hecho]]

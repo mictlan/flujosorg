@@ -1,0 +1,1 @@
+Permitir edición del las paginas web atreves del www. Actualmente si puede editar las paginas atreves de git+ssh. Ikiwiki permite edición por web atreves de cgi. nada mas hay que habilitar esta funcionalidad. 

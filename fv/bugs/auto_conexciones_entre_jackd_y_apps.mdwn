@@ -1,0 +1,8 @@
+Auto-conexión entre Jackd y audio apps
+
+> [[hecho ]]
+> ver: <http://github.com/mictlan/flujos-lives/commit/69fa1ee0d3c57ad17d268b3a0e0ebdc12807c60c> 
+>
+> falta configurar qjackctl y otras apps para que utiliza los scripts
+> pero eso seria otro bug
+[[hecho]]

@@ -1,0 +1,7 @@
+<img src="http://www.openclipart.org/image/800px/svg_to_png/johnny_automatic_newsboy.png" width="200px" class="right"/>
+
+###Lo mas nuevo de flujos.org
+
+que occurre con flujos.org. Con el blog mantenemos actualizado al lector. 
+
+[[!inline pages="./blog/* and !*/Discussion" actions=yes postform=yes show=0]]

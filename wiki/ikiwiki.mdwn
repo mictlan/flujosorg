@@ -1,0 +1,26 @@
+# notas sobre ikiwiki
+
+   - [[editar|edita]] ikiwiki en flujos.org
+   - como hacer [[vistaprevia|preview]] de ikiwiki en tu proprio maquina 
+   
+## instalacion de modo granja
+Para un introduccion rapido y superficial a las viceras de ikiwiki puedes ver [[como obtener una vistaprevia|preview]] de tu sitio localmente. Lo cual explica como compilizar el html de un copia clonado de flujos.org/wiki. 
+
+Dos formas de correr ikiwiki en modo granja, es decir manter varios sitios autonomos dentro de un unico instalacion de ikiwiki.
+
+    aptitude install ikiwiki
+
+### modo monolitico, un unico repositorio git
+la primera y mas sencilla es mantener un unico repositorio git. en el configuracion del ikiwiki (fichero "ikiwiki.setup") agregamos el plugin "local css" incluido en ikiwiki. ahora podemos hacer nuevos sitios simplismente creando nuevas carpetas en nuestro repositorio git y creando el fichero local.css en la nueva carpeta para difinir un estilo proprio. por ejemplo si tengo un dominio flujos.org donde esta el index de mi wiki flujos.org/fv puede tener otro ojo de estilo. flujos.org/fv/bugs o cualcuier pagina puede ser creado bajo de esta carpeta, tanto paginas como listados de subcarpetas en la forma de blogs, podcast, etc puede ser creado bajo esta carpeta.  
+
+### modo variada, varios repositorios git
+la segunda metodo utiliza varios repositorios de git y precisa que editamos el fichero /etc/ikiwiki/wikilist. cada linea en /etc/ikiwiki/wikilist tiene dos campos. ahora a actualizar la instalacion de ikiwiki, ikiwiki utilizará el usuario listado (primer campo) para compiliar segun la configuracion especificado (segundo campo). asi podemos tener varios repositorios de git. es possible entonces, pero no necesario, que cada dominio y cada subpagina corresponde a su proprio repositorio git. 
+
+por ejemplo un /etc/ikiwiki/wikilist podria aparecer así: 
+
+    joey /home/joey/.ikiwiki/ikiwiki.setup
+
+
+Pero lo mas probable es que si acaba con un combinacion de los dos metados. Seperamos ciertas cosas en su proprio repositorio de git por motivos de seguridad, o por motivos de organizacion. Y luego dentro de estos repositorios distintos si puede crear sub sitios los mantenadores de estos sitios. 
+
+

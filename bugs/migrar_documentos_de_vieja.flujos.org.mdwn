@@ -1,0 +1,7 @@
+El manual ya esta en parte:
+
+<http://flujos.org/wiki/fv/manual/>
+
+> la documtacion en http://vieja.flujos.org/wiki/ debe ser convertido a markdown y incluido en el codigo fuente de http://flujos.org. Facilitaria mucho el trabajo sobre ellos. 
+
+

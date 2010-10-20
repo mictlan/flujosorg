@@ -1,0 +1,3 @@
+<h1>Flujos.org</h1>
+<img src="http://flujos.org/images/logo_nobg.png" width="200px" class="left"/>
+

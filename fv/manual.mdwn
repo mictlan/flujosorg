@@ -1,0 +1,26 @@
+Bienvenidx al manual de uso del Live CD flujos-vivos. Este manual ha sido desarrollado para que puedas experimentar con los programas necesarios para hacer tu radio por internet. En él encontrarás soluciones prácticas para acercarte sin inhibiciones a Linux. Esta es una pequeña Hoja de navegación para reconocer enlaces que hemos resaltado con colores, así cuando le piques a estos enlaces navegarás a lugares donde podrás encontra más información: Enlaces en color verde Te llevarán al glosario Enlaces en color anaranjado Te llevarán a secciones del manual que hablan del mismo tema Enlaces en color azul Te llevarán a páginas de internet ¡¡¡Disfruta de tu navegación por los mares de Linux en estos flujos-vivos!!!
+
+# Guía rápida 
+
+[[fv/manual/guiarapida]]
+
+
+
+#1 Flujos 
+
+[[fv/manual/flujos]]
+
+# 2 Audio en linux 
+
+[[fv/manual/audioenlinux]]
+
+# 3 Programas para el streaming 
+
+[[fv/manual/applicaciones]]
+
+
+
+#4 Herramientas adicionales 
+[[fv/manual/herramientas]]
+
+

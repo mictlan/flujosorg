@@ -1,0 +1,6 @@
+[[hecho]] , incluimod .config/rncbc.org/QjackCtl.conf para arrancar applicacinoes necesarios a la configuracion de qjackctl
+
+qjackctl debe de utilizar /usr/local/bin/[star|stop]apps.sh para hacer un unico interfaz para todo lo que tiene que ver con jackd. 
+
+*al arrancar jackd con qjackctl corre /usr/local/bin/startapp.sh
+*al pararar jackd con qjackctl corre /usr/localbin/stopapps.sh

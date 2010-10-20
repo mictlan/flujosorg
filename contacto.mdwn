@@ -1,0 +1,2 @@
+[[!template  id=contacto correo="""<contacto@flujos.org>""" align=center ircs=irc.freenode.net ircc=flujos jabber="""<flujos@conf.jabberes.org>""" lista="""https://lists.aktivix.org/mailman/listinfo/flujosvivos"""]]
+

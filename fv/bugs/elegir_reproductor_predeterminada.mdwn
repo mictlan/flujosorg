@@ -1,0 +1,8 @@
+Probar y definir un reproductor (ligero) predeterminado de la sitema.
+
+ [[hecho]]
+> en hackeamos flujos-vivos df
+> eligimos a mpd 
+
+
+

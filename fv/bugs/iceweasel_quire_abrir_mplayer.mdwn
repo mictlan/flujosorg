@@ -1,0 +1,1 @@
+iceweasel no debe querer abrir mplayer sino utilizar reproductor del la sistema

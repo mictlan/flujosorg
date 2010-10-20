@@ -1,0 +1,32 @@
+#Mas comandos de git
+
+### Revisa la bitacora de cambios con git log
+
+    git log
+  
+Esto te mostrara una lista de todos los cambios al respositorio de git. Cada cambia es listado por un numero hash que identifica cada cambio que ha sido comprometido. Incluye el nombre del autor, la fecha y hora del cambio y el mensaje que fue incluido por el autor.
+
+<pre>
+    commit db67fa8802c869ff0321fc957fe4b71c14e9bad2  
+    Author: git version control git@server.org  
+    Date:   Wed Jul 21 21:40:26 2010 +0000   
+        comentario sobre este cambio
+</pre>
+
+### Ver la diferencia entre dos versiones:
+
+    git diff x7saz db67f
+
+Donde __db67__ corresponde a las primeras cuantos caracteres del HASH del commit mostrado arriba en la bitacorra de git (el HASH comleto siendo __db67fa8802c869ff0321fc957fe4b71c14e9bad2__) y __x7saz__ es las primeras cuantos caracteres del HASH de un commit anterior. Suena complicado pero no lo  es. Con __git log__ obtengamos toda la informacion necesaria. 
+
+    
+###Cambiar nombre de autor y correo asociado con tus cambios  
+    git config user.email "yo@server.org"</code></pre>  
+    git config user.name "yo"  
+    
+### Deshacer    
+
+[[!template  id=note text="""Para dishacer el cambio mas recien al index `git reset --hard HEAD`"""]]
+
+[[!template  id=note text="""Para dishacer el ultimo commit: `git revert HEAD`"""]]
+

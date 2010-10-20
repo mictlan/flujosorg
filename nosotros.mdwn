@@ -1,0 +1,26 @@
+
+Flujos.org es un colectivo dedicado al desarollo de herramientas para medios 
+participativos. El enfoque principal de nuestro trabajo es la edición y 
+transmisión de audio con software libre – actividades importante para 
+cualquier radio libre o comunitaria. Queremos facilitarles hacer radio, 
+ponerlo al alcanze de la mayor mutlitud posible. Por eso compilamos y 
+documentamos software. Distribuimos un Live-CD llamado flujos-vivos con 
+programas para hacer radio en Internet (streaming) y un manual para saber usar 
+estos programas. Solo te falta bajar y usarlo...
+
+Flujos.org es una red de colaboradores activistas que trabajan sin fines de 
+lucro. Organizamos un espacio abierto (un wiki) para documentar y discutir el 
+funcionamiento de flujos-vivos y de nuevas programas. En otros espacios del 
+sitio flujos.org trabajamos en nuevas versiones de flujos-vivos y mantenemos 
+actualizado el correspondiente manual. Es un proceso de creación que pasa bajo 
+tus ojos. Solo te falta verlo...
+
+Flujos.org es contajioso. Ya existe una comunidad de usuarios en varios paises 
+de las Americas (y quién sabe donde más...). Cualquier usuario se puede volver 
+desarollador – de hecho no hay diferencia. Nosotros no prestamos servicios, 
+colaboramos. En nuestra lista de correos encontraras las respuestas a tus 
+preguntas y dudas o puedes responder a preguntas que ya te sabes. Solo te 
+falta subscribirte...
+
+Haz radio, crea flujos!
+

@@ -1,0 +1,1 @@
+Podemos facilitar la inclusion del trabajo grafica poniendo todo en un paquete deb. 

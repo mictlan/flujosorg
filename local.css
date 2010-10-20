@@ -1,0 +1,125 @@
+/* ikiwiki local style sheet */
+/* Add local styling here, instead of modifying style.css. */
+
+html {
+    background-image: url(verde.png);
+    min-height: 100%;
+    }
+
+body {
+    width: 700px;
+    margin: 10px auto 0px;
+    background-color: #FFF;
+     box-shadow: 0 0 10px rgb(0,0,0);  
+    -moz-box-shadow: 0 0 10px rgb(0,0,0); 
+    -webkit-box-shadow: 0 0 10px rgb(0,0,0);  
+    min-height: 100%;
+    padding: 10px;
+    }
+
+img {margin: 10px}
+
+.left {
+   float: left;
+}
+
+.right {
+   float: right;
+}
+
+.calign {
+    text-align: center;
+    }
+/* no si puede cambiar la cabezera :( */
+
+.pageheader, #pageinfo {
+        display: none;
+            }
+
+
+.flaco {
+    width: 600px;
+    margin: 0 auto;
+    }
+
+.inline {
+    list-style-type: none;
+    font-size: 150%;
+    }
+.inline li {
+    color: #c00040;
+    }
+
+.inline li:before {
+    content: " | ";
+    }
+
+#logos {
+   display: block;
+   margin-top: 25%;
+      }
+ul {
+   list-style-position:inside;
+}
+
+a, h1 {
+   text-decoration: none;
+   color: #150e28;
+    }
+a:hover {
+    text-decoration: underline;
+    }    
+h1, a {
+    text-shadow:1px 1px 1px #CCCCCC;
+    }
+/*on the other hand recentchantes are useful .actions ul,*/ 
+.pagedate, span .title  {
+  display: none;
+}
+/* remove borders from footer */
+#pageinfo {
+  border-top: none;
+}
+.notebox {
+    box-shadow: 0 0 10px rgb(0,0,0);  
+    -moz-box-shadow: 0 0 10px rgb(0,0,0); 
+    -webkit-box-shadow: 0 0 10px rgb(0,0,0);  
+    background-color: #e2d7a3;
+    }
+
+/* make code prettier */
+/*
+pre {
+    margin-left:20px; 
+    background-color: #fff; 
+    padding: 6px 10px;
+    box-shadow: 0 0 10px rgb(0,0,0);  
+    -moz-box-shadow: 0 0 10px rgb(0,0,0); 
+    -webkit-box-shadow: 0 0 10px rgb(0,0,0);  
+    display: block;
+    clear: both;
+   } 
+   */
+pre {
+      margin: 0 1.0em 1.0em;
+      padding: 0.5em;
+      border: 1px dashed #150E28;
+      background-color: #F7F9FA;
+      color: #000;
+      overflow: auto;
+
+}
+/* chin. era bonita pero si estorbe en algunas partes
+code:before {
+   content: "$ "; 
+    }
+*/
+.recentchanges {
+    display: block;
+    clear: both!important;
+    font-size: small;
+    }
+#pagebody {
+    
+    clear:both;
+    }

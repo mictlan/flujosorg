@@ -1,0 +1,45 @@
+[[!toc levels=3]]
+Puedes picarle a los enlaces y descargar con cualquier navegador, te recomendamos [[verificar las sumas de comprobación|http://flujos.local/fv/descarga/#index4h2]] para asegurarte que ningún error corrompió tu descarga.
+
+En todos casos recomendamos el version mas nuevo disponible. Todos los imagenes estan disponibles aqui:
+
+
+[[http://vivo.flujos.org/download/]]
+
+## CD-vivo ##
+
+imagenes cdrom terminan con .iso. es la opcion mas facil para novatos, pero con menor rendamento. la ordenadora es menos responsiva cuando corre desde cdrom.  y los puede encontrar aqui:
+
+[[http://vivo.flujos.org/download/iso-cdrom]]
+
+
+## USB-vivo ##
+
+imagenes cdrom terminan con .img y los puede encontrar aqui:
+
+[[http://vivo.flujos.org/download/usb-hdd]]
+
+Esta opcion es un poco mas dificil que quemar un cdrom, y requiere de conociamiento de la sistema. Como ahora vas a copiar el imagen a un particion de disco, debes de fijar en sobrescribir la particion correcto. De otro modo sobrescriberas  otro informacion o tu sistema operativa. Para montar el Flujos Vivos en USB les referimos a el [[http://wiki.debian.org/DebianLive/Howto/USB|wiki de debian-live]]
+
+## netboot ##
+ojo eso es la opcion mas complicado. 
+
+Para arrancar la computadora por red (Netboot): Configura un servidor TFTP y uno DHCP (o BOOTP, o RARP) que servirá los medios de instalación a las máquinas de una red local. Si el BIOS de la máquina cliente lo permite, podrá arrancar el sistema de instalación de Debian por red (usando PXE y TFTP), y continuar el resto de la instalación de Debian por red.
+
+No todas las máquinas permiten arrancar por red. Debido al trabajo adicional necesario, este método no se recomienda a usuarios novatos.((tomado de http://www.debian.org/distrib/netinst))
+
+[[http://vivo.flujos.org/download/net]]
+
+## verificar ##
+
+Artículo en Wikipedia sobre la suma de comprobación con MD5: [[http://es.wikipedia.org/wiki/MD5#Seguridad]]
+
+En GNU/Linux y otros *nixes, basta con escribir `md5sum archivo_que_descargaste.ext` en una terminal.
+
+Alternativamente, si usas Mozilla Firefox, puedes añadir el complemento [[https://addons.mozilla.org/es-ES/firefox/addon/12335]] que te ayudará también a verificar tus descargas.
+
+Si no usas Firefox pero sí Windows, puedes verificar la suma con esta aplicación: [[http://portableapps.com/apps/utilities/winmd5sum_portable]]
+
+## Notas ##
+
+Cuidado con Roxio, suele quemar mal las ISOS. Si usas Windows puedes [[http://portableapps.com/apps/utilities/infrarecorder_portable|probar un quemador de CD/DVD portátil para Windows]]

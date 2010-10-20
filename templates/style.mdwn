@@ -1,0 +1,2 @@
+<link rel="stylesheet" href="<TMPL_VAR BASEURL><TMPL_VAR style>.css" type="text/css" />
+

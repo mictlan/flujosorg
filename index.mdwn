@@ -1,0 +1,20 @@
+[[!meta title="flujos.org"]]
+<img src="http://flujos.org/images/logo_nobg.png" class="left"/>
+#Flujos.org 
+Laboratorio de Multimedia en la red, Radio y Software Libre.
+<ul class="inline">
+<span class="left">
+<li>[[contacto]]</li>
+<li>[[colaborar]]</li>
+<li>[[quiénes somos|nosotros]]</li>
+</span>
+<span class="left">
+<li>[[blog]]</li>
+<li>[[bugs]]</li>
+<li>[[flujos-vivos|fv]]</li>
+</span>
+</ul>
+<span id="logos">
+<img class="right" src="http://flujos.org/images/ikiwiki.png">
+<img class="right" src="http://flujos.org/images/git-logo.png">
+</span>

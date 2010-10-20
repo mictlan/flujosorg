@@ -1,0 +1,47 @@
+[[!img editor.png class="right"]]
+#Edicion
+
+despues de leer sobre edicion, agaliza el trabajo a treves de la [[previsualizacion local|preview]]
+
+## Preparar tu sistema
+
+Antes de editar tenemos que hacer unas configuraciones una vez para que si quedan y al siguente vez ya son menos pasos.
+
+### Generar y compartir una llave publica
+
+Para contribuir al wiki necesitas proporcionarnos un llave publica rsa. lo cual si puede producir con el orden:
+
+    ssh-keygen -t rsa -f ~/.ssh/id_rsa
+
+ahora encontraras un fichero id_rsa.pub en la carpeta .ssh de tu home, nos la manda por correo y te agregamos a la ista de usuarios permitidos aceder y editar. 
+
+### Clonar el codigo
+
+    git clone git@flujos.org:wiki.git
+
+[[!template  id=note text="""Premier revisa [[mas comandos de git|mas_comandos_de_git]] y luego para ver mas posibilidades, conoce usted la [[la magia de git|http://www-cs-students.stanford.edu/~blynn/gitmagic/intl/es/]]."""]]
+
+eso te deja una carpeta "wiki" con las ficheros adentro. las que ten van a intersar son los *.mdwn
+
+## Editar 
+
+camba a la carpeta wiki abre uno de los ficheros en un editor de texto editas y guardas. por ejemplo:
+
+    cd wiki; gedit index.mdwn
+
+### Agregar cambios al index de tu repositorio personal
+
+    git add index.mdwn
+
+### Compremeta los cambios
+
+cuando compremetemos los cambios es necesario dejar un mensaje para que los demas entienden los cambios. por ejemplo
+
+    git commit -m "agregar link a flujos.org a index.mdwn"
+
+### Empujar los cambios al servidor
+
+    git push 
+
+y listo! Ya puedes revisar tus cambios en el sitio.
+

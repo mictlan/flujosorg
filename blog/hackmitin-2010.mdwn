@@ -1,0 +1,8 @@
+<img src="http://www.openclipart.org/image/800px/svg_to_png/hackmeeting-oaxaca.png" width="200px" class="left"/>
+
+El HM es un encuentro participativo y gratuito en el que la dicotomía organizador/asistente se diluye en el deseo de autogestionar el encuentro colectivamente. En el HM decenas de hackers y hacktivistas nos ponemos a trabajar para crear y hacer crecer nuestra comunidad de manera autogestionada, igualitaria, horizontal y, sobre todo, libre.
+
+Entendemos el Hackmitin como una red de actividades autoorganizadas (talleres, charlas, mesas redondas, exposiciones, posters, etc.) que hemos llamado nodos. Puedes sumarte proponiendo nodos de trabajo/actividad/difusión. Cualquier persona es libre de coordinar, presentar, difundir un nodo dentro del Hackmitin: ÚNETE a La RED. 
+
+[[revisa la convocatoria|http://espora.org/hackmitin/index.php/Call4Nodes]] > 
+[[mas info en la pagina del Hackmitin|http://espora.org/hackmitin]]

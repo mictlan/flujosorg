@@ -1,0 +1,3 @@
+[[hecho]], ver <http://github.com/mictlan/flujos-vivos>
+
+> El nombre del repositorio git quedó flujos-lives por conviniencia. Debemos cambiarlo a flujos-vivos para ser mas congruentes con la esquema de nombres. 

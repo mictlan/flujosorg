@@ -1,0 +1,10 @@
+olvide extesion .mdwn en el fichero
+
+>qjackctl no utliza startapps sh
+>
+>qjackctl debe de utilizar /usr/local/bin/[star|stop]apps.sh para hacer un unico interfaz para todo lo que tiene que ver con jackd.
+>
+>* al arrancar jackd con qjackctl corre /usr/local/bin/startapp.sh 
+>* al pararar jackd con qjackctl corre /usr/localbin/stopapps.sh
+
+[[hecho]]

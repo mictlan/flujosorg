@@ -1,0 +1,3 @@
+[[bugs]] Estos bugs ya las aplastamos. los recientamente acabados. 
+
+[[!inline pages="./* and link(./hecho) and !*/Discussion" sort=mtime show=10]]

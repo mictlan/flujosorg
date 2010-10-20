@@ -1,0 +1,1 @@
+flujos.org/wiki ahora mantenido en ikiwiki, compilidor de html que utiliza git como motor. ver <flujos.org/wiki/edita> para empezar coolaborar.

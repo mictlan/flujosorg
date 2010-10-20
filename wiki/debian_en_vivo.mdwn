@@ -1,0 +1,287 @@
+#creando un debian en vivo 
+
+Después de conocer la [[pagina principal de debian-live|http://live.debian.net]], empezamos por instalar live-helper
+
+    apt-get install live-helper
+
+
+##CDROM##
+utilzaremos lh_config para definir los caracteristicas de nuestro sistema "live". vamos utilizar la distribución debian -lenny ("-d lenny") con el escritrio más lijero xfce ("-p xfce"). con el opción "-p" podemos escoger de varios listas de paquetes como los listados /usr/share/live-helper/lists/. con el opción "--packages" podemos agregar mas paquetes a nuestra cd o USB en vivo. 
+
+    lb config -d lenny -b iso -p xfce  --packages audacity mpd sonata mpc mplayer --debian-installer enable
+
+y luego
+
+    sudo lb build
+
+y al terminar nos deja con un binary.iso
+
+###Pruebas###
+
+    qemu -m 512 -cdrom binary.iso -redir tcp:2222::22 -soundhw all
+
+el opcion -m limite la memoria ram a 256 en este caso. y el -redir nos permite a conectar al sistema virtual atreves de ssh. si conectamos con ssh al puerto 2222 de localhost, no reenviaria a la sistema del binary.iso. "-soundhw all" habilita todos los disponitivos de audio disponibles y QEMU_AUDIO_DRV=alsa indica que vamos a utilizar alsa en lugar del predeterminado OSS.
+
+##USB##
+
+en nuevos version de live-helper si puede ignorar esta inforacion porque ya es el comportamente predeterminado producir un imagen hybrid que es util tanto para quemar a cd como a instalar a USB. 
+
+###Generar Imagen###
+
+utilzaremos lh_config para definir los caracteristicas de nuestro sistema "live". vamos utilzar la distrobucion debian -lenny ("-d lenny") con el escritrio más lijero xfce ("-p xfce"). con el opcion "-p" podems escojer de varios [[listas de paquetes]] como los listados /usr/share/live-helper/lists/. con el opcion "--packages" podemos agregar mas paquetes a nuestra cd o USB en vivo. 
+
+    lb config -d lenny -b usb-hdd -p xfce  --packages audacity mpd sonata mpc mplayer  --debian-installer enabled
+
+y para empezar de descargar y construir el binary.img:
+
+    sudo lb build
+
+eso nos dejara un "binary.img" listo para quemar a disco  o copiar a usb. si queremos un imagen para quemar a cdrom, para hacer un sistem debian en vivo, cambiamos el el opcion "-b" del orden "lh_config" a "iso" en lugar de "usb-hdd":
+
+###Copiar Imagen a USB###
+
+y para copar en imagen a nuestro usb, primer hay que saber que es el desponitivo del usb. 
+
+    sudo fdisk -L  | grep Disco
+
+    Disco /dev/sda: 123.5 GB, 123522416640 bytes
+    Disco /dev/sdX: 4063 MB, 4063232000 bytes
+
+el mio USB es lo de 4063 MB, o /dev/sdX
+
+si quisiera copar el imagen sobre el USB competo, borrando TODOS los datos en el disponitivo:
+
+    sudo dd if=binay.img of=/dev/sdX
+
+eso va a crear un único partición del tamaño del fichero binary.img con el nombre /dev/sdX1. 
+
+###Crear Segunda Partición###
+
+el imagen que generamos arriba no va ser mas grande de 750Mb, entonces si tenemos un usb de 4gigas, como /dev/sdX en el ejemplo, estamos desperdiciando espacio. nos conviene hacer otro partición formateado con fat16 para seguir utilizando nuestra usb para compartir archivos entre ordenadoras mac, windowz y los *nix. si vamos a guardar ficheros mas grande que 4 gigas en el USB, utilizamos fat32 (-F 32) en lugar de fat16.
+
+utilizadndo [[fdisk]] si puede crear un partición de fat16. luego la damos formato:
+
+    mkfs.vfat -F 16 /dev/sdX2
+
+ahora monta /dev/sdX2 y pon sus datos ahi. entre las cosas que podemos guardar en esta particion son [[#utilizar_archivo_de_imagen_de_disco|imagenes de disco]] o [[#live-snapshot|live-snapshots]], para guardar nuestra session vivo.  
+
+###Persistence###
+
+si queremos hacer un partición para [[#persistance|persistencia]] en lugar de un particion para compartir archivos, o una tercer partición,  el partición  si formatea con ext2 y la damos un etiquete de "live-rw" o "home-rw". con [[fdisk]] creamos el partición y con mkfs la damos formato:
+
+    mkfs.ext2 /dev/sdX3 -L live-rw
+
+el opción -L live-rw, es clave para que debian-live reconoce la particion como persistente. si la fuéramos a cambiar "live-rw" a "home-rw" persistencia ya no seria para todo la sistema sino únicamente data de los usuarios. 
+
+###Pruebas###
+
+
+    qemu -m 512 -hda binary.img -redir tcp:2222::22 -soundhw all
+
+###Fuentes###
+http://www.esdebian.org/wiki/live-helper
+
+##más paquetes##
+
+podemos utilizar todos las listas de /usr/share/live-helper/lists con el opcion "-p"
+
+tambien podemos crear nuestas proprios listas y ponerlos en /usr/share/live-helper/
+
+además podemos agregar nuevos repositorios, si queremos instalar un paquete de debian-multimedia.org por ejemplo. 
+
+en "config/chroot_sources/live.chroot" ponemos:
+
+    deb http://debian-multimedia.org lenny main
+
+y su clave gpg en config/chroot_sources/live.chroot.gpg
+
+el clave gpg de debian-multimedia.org si puede encontrar aqui:
+http://www.debian-multimedia.org/pool/main/d/debian-multimedia-keyring/debian-multimedia-keyring_2008.10.16_all.deb
+
+esta en la carpeta /usr/share/keyrings/ dentro del paquete.
+
+###fuentes###
+<http://live.debian.net/manual/html/packages.html>
+
+##Configuracion de la idioma##
+
+la mapa de teclado predeterminado es "us". pero si vivo en mexico seguro que tengo un teclado latino americado. es precisco añadir un opcion del configuracion del servivor X.  "latam". 
+
+    lb config --bootappend-live "locale=es_MX.UTF-8 keyb=la-latin1"
+
+###fuentes###
+<http://wiki.debian.org/DebianLive/l10n>
+
+<http://live.debian.net/manual/html/language.html>
+
+##Customización de contenidos##
+
+<http://live.debian.net/manual/html/contents.html#id2570350>
+
+
+##Con un kernel proprio##
+<http://lists.alioth.debian.org/pipermail/debian-live-devel/2008-April/003456.html>
+
+##utilizando un proxy##
+
+si pretendes hace eso mas de una ves es recomendable usar un proxy para apt. en el caso que quieres hacer varios discos live o llevas unas pruebas para llegar a uno que gustas, únicamente tienes que descargar los paquetes uno solo ves. ve el breve descripción de como instalar [[approx]].
+
+en esto caso nuestra orden de lh_config apreciaría mas como lo siguiente. 
+
+    lb config -d lenny -b usb-hdd -p xfce -m  http://localhost:9999/debian --mirror-chroot-security http://localhost:9999/security --packages audacity mpd sonata mpc mplayer  --debian-installer enabled --language es
+ 
+    sudo lb build
+
+###fuentes###
+
+<http://wiki.debian.org/DebianLive/Howto/Cache_Packages>
+
+##Persistance##
+Para no perder nuestra sesión de trabajo al reiniciar el disco,  existe un  modo que permite que un sesión de usuario persiste entre sesiones de debian-live. Si activa esta modo con el opción de arranque "persistent". Esta opcion causa la sistema, al arrancarse, buscar sesiones guardados y guardar el sesión actual a cerrar el sesión actual. 
+
+Actualmente hay dos generos de Persistencia: live-rw, y home-rw. en la primera todo la sistema persiste, en la segunda únicamente los datos del usuario. 
+
+Para activar este modo pasamos el opción “persistence" al cargador de arranque. 
+
+###live-snapshot###
+Podemos guardar una imagen (snapshot) de los cambios que hemos hecho. Al reiniciar flujos-vivos indicamos al cargador de arranque donde está la imagen. De esta manera podemos pausar el trabajo que estamos haciendo en flujos-vivos. O, inclusive moverlo a otro cpu.
+
+    sudo live-snapshot 
+
+tardara un momento y al seguir dará un mensaje indicando que tienes que copiar el snapshot a una unidad de disco. El disco en este caso puede ser el disco duro del cpu o una memoria usb, o cualquier dispositivo con sistema de ficheros ext31) o vfat 2). El snapshot quedará en /live/live-snapshot-mnt.XYZ ((“XYZ” refiere al ID aleatorio que live-snapshot asigna a la carpeta y cambiará cada vez que el usuario corre live-snapshot. )) y se llamará live-sn.cpio.gz.
+
+La próxima vez que inicies sesión con live CD o USB, ingresas la opción “persistent” al menú de arranque. Así que al arrancar escaneará todos los dispositivos que encuentre en búsqueda de un archivo que se llama live-sn*. el snapshot quedará montando por el sistema. Así que si utilizamos memoria usb la tendremos que dejar conectada mientras trabajemos la nueva sesión del live-Debian.
+
+[[el manual de live-snapshot|http://grml.org/online-docs/live-snapshot.en.1.html]]
+
+###Utilizar archivo de imagen de disco###
+
+En lugar de live-snapshot, podemos crear el archivo live-rw. En el ejemplo el imagen es  un  fichero de 1Giga pero puede ser de cualcuier tamaño, siempre y cuando colocamos suficiente espacio para los datos que pretendemos guardar:
+
+    dd if=/dev/zero of=live-rw  bs=1M count=1000
+
+para cambiar el tamaño del imagen, modifica el valor de  “count”.
+
+ahora creamos un sistema de ficheros en el archivo:
+
+    /sbin/mkfs.ext2 -F live-rw
+
+ponemos el live-rw en nuestro usb/memoria. La memoria puede ser vfat para utilizarlo tambien bajo otros sistemas operativos.
+
+###Utilizar partición de disco###
+
+Si queremos hacer un partición live-rw o home-rw, ponemos live-rw o home-rw como etiqueta del partición indicado. Una vez que hemos creado el partición, utilizando [[fdisk]] por ejemplo, al crear la sistema de ficheros en ello la damos el etiqueta. Por ejemplo si queremos que persiste todo la sistema en /dev/sdX2, al crear la sistema de ficheros en /dev/sdX2 agregamos el opción -L live-rw:
+
+    mkfs.ext2 /dev/sdX2 -L live-rw
+
+##Remasterizar Imagen##
+
+Podemos montar el imagen, hacer cambios, y luego producir un nuevo imagen. 
+
+
+### Remasterizar filesystem.squashfs ###
+
+Primero hay que tener acceso al squashfs. la podemos copiar del usb, si tenemos flujos-vivos instalado en un usb, o del servidor de arranque por red. o la podemos descargar de live.flujos.org. Si por ejemplo únicamente tenemos el imagen del Usb sin instalarlo en un usb, lo podemos montar el Usb como en el siguiente sección. Si hemos obtenido el squashfs de otra manera no es necesario montar el imagen, y podemos proceder directamente a montar squashfs.
+
+#### Montar Imagen Usb ####
+Esto paso es necesario para aceder a filesystem.squashfs. Si tienes por ejemplo un debian-live en USB, puedes montar el filesystem.squashfs directamente del usb, sin necesidad de montar binary.img. Si es el caso, salta directamente a 
+
+crear punto de montaje para mountar el imagen del usb:
+
+    mkdir /tmp/img
+
+mountar imagen usb:
+
+    mount -o loop,offset=512 binary.img /tmp/img
+
+#### Montar filesystem.squashfs ####
+
+crear punto de montaje para montar filesystem.squashfs:
+
+    mkdir /tmp/squashfs
+
+montar filesystem.squashfs
+
+    mount -o loop /tmp/img/live/filesystem.squashfs /tmp/squashfs
+
+squashfs es solo lectura, entonces hay que copiar los datos a otro carpeta donde podemos modificarlos. al terminar utilizaremos squahfs-tools para recrear el squashfs. 
+
+    mkdir /tmp/re-squashfs
+    cp -av /tmp/squashfs/* /tmp/re-squashfs/
+
+agrega proc y /dev/pts para que el chroot funciona:
+
+    mount -t proc proc /tmp/re-squashfs/proc
+    mount --bind /dev/pts /tmp/re-squashfs/dev/pts
+
+chroot: 
+
+    sudo chroot /tmp/re-squashfs
+
+ahora instala paquetes con apt-get. modifica los configuraciones y cuando terminas
+
+    ctrl-d
+
+#### mksquasfs ####
+resquashificala!
+
+    mksquashfs /tmp/re-squashfs /tmp/filesystem.squashfs
+
+luego copia el filesystem.squashfs a tu debian-live USB o servidor de arranque
+
+###Grub###
+Un motivo por remasterizar el squashfs puede ser cambiar el cargador de arrqnque. 
+Asumimos que el usb con flujos-vivos es /dev/sdX3.
+
+    mkdir /tmp/sdX3
+    mount /dev/sdX3 /tmp/sdX3/
+    cd /tmp/sdX3
+    mkdir -p boot/grub
+    cp /boot/grub/* boot/grub
+    echo '(hd1) /dev/sdX' > boot/grub/device.map
+    grub-install --root-directory=/tmp/sdX3 --no-floppy '(hd1)'
+
+y editar menu.lst:
+
+    vim /tmp/sdX3/boot/grub/menu.lst
+
+###instalar la sistema en el USB###
+montar el imagen:
+
+    mkdir /tmp/img
+    mount -o loop,offset=512 binary.img /tmp/img/
+
+Copiar los archivos:
+
+    cp -a /tmp/img/* /media/sdX3/
+
+borrar los archivos del managador de arranque isolinux :
+
+    cd /media/sdX3
+    rm -Rf isolinux
+
+dismontar el particion:
+
+    umount /dev/sdX3
+
+
+
+##fuentes##
+
+<http://crysol.org/es/node/1114>
+
+<http://www.esdebian.org/wiki/live-helper>
+
+[[http://www.debian-administration.org/articles/630]]
+
+[[http://live.debian.net/manual/html/]]
+
+<http://el-directorio.org/DebianLive>
+
+<http://wiki.debian.org/DebianLive/Howto/Custom_Install>
+
+<http://wiki.debian.org/DebianLive>
+
+<http://blogs.koolwal.net/2009/01/24/announcement-booting-debian-linux-on-usb-hard-drive-and-usb-flashjump-drive/>
+
+<http://el-directorio.org/DebianLive>
