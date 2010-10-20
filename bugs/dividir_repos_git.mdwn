@@ -1,0 +1,2 @@
+
+Tenemos que dividir el repositorio git en al menos dos. 1) paginas web de flujos.org y 2) el manual de flujos-vivos. sobre todo para poder incluir unicamente el manual en flujos-vivos, ahora que las paginas ocupan algo mas de espacio. 
