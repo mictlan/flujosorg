@@ -17,7 +17,12 @@ ahora encontraras un fichero id_rsa.pub en la carpeta .ssh de tu home, nos la ma
 
 ### Clonar el codigo
 
-    git clone git@flujos.org:wiki.git
+    git clone git@flujos.org:flujosorg.git
+### Manual ###
+
+el manual ha sido seperado en su proprio repositorio para clonarlo es:
+
+   git clone git@flujos.org:manual.git
 
 [[!template  id=note text="""Premier revisa [[mas comandos de git|mas_comandos_de_git]] y luego para ver mas posibilidades, conoce usted la [[la magia de git|http://www-cs-students.stanford.edu/~blynn/gitmagic/intl/es/]]."""]]
 
