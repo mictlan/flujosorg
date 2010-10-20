@@ -1,3 +1,4 @@
+[[hecho]] 
 los repositorios ya estan divididos. y el manual ha sido borrado del repo general. ahora los ordenes para clonar, respectivamente, el repo de la pagina y el manual son:
 
 ####Pagina Entera####
