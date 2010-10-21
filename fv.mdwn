@@ -5,7 +5,7 @@ Flujos-vivos es una herramienta para hacer radio en línea con software libre. E
 Este espacio esta siendo reconstruido. Si algo esta perdido puede que esta en el [[wiki antigua|http://vieja.flujos.org/wiki]]. 
 
 
-   * [[manual]]
+   * [[manual|http://flujos.org/fv/manual/]]
    * [[bugs]]
    * [[lista de cambios|http://github.com/mictlan/flujos-vivos/commits/master]]
    * [[descarga]]
