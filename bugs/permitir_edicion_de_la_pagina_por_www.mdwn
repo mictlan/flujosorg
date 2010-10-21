@@ -1,5 +1,5 @@
 
-ahora si puede crear su cuenta y editar por www. que flujos.org y flujos.org/fv/manual ahora existe en dos repos de git ([[dividir_repos_git]]), necesitas crear una cuenta para cada uno. es recomendable utilizar openid, para utilizar una cuenta para los dos y demas sitios que acepta open id. ver <www.myopenid.com> 
+ahora si puede crear su cuenta y editar por www. que flujos.org y flujos.org/fv/manual ahora existe en dos repos de git ([[dividir_repos_git]]), necesitas crear una cuenta para cada uno. es recomendable utilizar openid, para utilizar una cuenta para los dos y demas sitios que acepta open id. una buen opcion es: [www.myopenid.com]
 
 markar bug [[hecho]]
 
