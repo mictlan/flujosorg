@@ -1,1 +1,5 @@
-Permitir edición del las paginas web atreves del www. Actualmente si puede editar las paginas atreves de git+ssh. Ikiwiki permite edición por web atreves de cgi. nada mas hay que habilitar esta funcionalidad. 
+[[hecho]]
+
+ahora si puede crear su cuenta y editar por www. que flujos.org y flujos.org/fv/manual ahora existe en dos repos de git ([[dividir_repos_git]]), necesitas crear una cuenta para cada uno. es recomendable utilizar openid, para utilizar una cuenta para los dos y demas sitios que acepta open id. ver <www.myopenid.com> 
+
+>Permitir edición del las paginas web atreves del www. Actualmente si puede editar las paginas atreves de git+ssh. Ikiwiki permite edición por web atreves de cgi. nada mas hay que habilitar esta funcionalidad. 
