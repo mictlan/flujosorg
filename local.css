@@ -137,3 +137,8 @@ code:before {
 #footer #sitelinks a:before {
         content: " | ";
 }
+
+#footer #sitelinks .parentlinks a:before {
+   content: none;
+}
+
