@@ -136,14 +136,8 @@
 <TMPL_LOOP PARENTLINKS>
 <a href="<TMPL_VAR URL>"><TMPL_VAR PAGE></a>/ 
 </TMPL_LOOP>
-</span>| <a href="/wiki">Wiki</a> | <a href="/mapa">Mapa del Sitio</a> 
+</span><- | <a href="/wiki">Wiki</a> | <a href="/mapa">Mapa del Sitio</a> 
 <TMPL_ELSE><div id="sitelinks"></nav></TMPL_IF>
-
-<span class="parentlinks">
-<TMPL_LOOP PARENTLINKS>
-<a href="<TMPL_VAR URL>"><TMPL_VAR PAGE></a>/ 
-</TMPL_LOOP>
-</span>
 
 <TMPL_IF HTML5><nav id="pageinfo"><TMPL_ELSE><div id="pageinfo"></TMPL_IF>
 
