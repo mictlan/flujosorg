@@ -1,0 +1,2 @@
+agregar vinculos de navegacion: Inicio, wiki, mapa de sitio, etc
+
