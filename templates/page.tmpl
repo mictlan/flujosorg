@@ -35,11 +35,6 @@
 <TMPL_IF HTML5><section class="pageheader"><TMPL_ELSE><div class="pageheader"></TMPL_IF>
 <TMPL_IF HTML5><header class="header"><TMPL_ELSE><div class="header"></TMPL_IF>
 <span>
-<span class="parentlinks">
-<TMPL_LOOP PARENTLINKS>
-<a href="<TMPL_VAR URL>"><TMPL_VAR PAGE></a>/ 
-</TMPL_LOOP>
-</span>
 <span class="title">
 <TMPL_VAR TITLE>
 <TMPL_IF ISTRANSLATION>
@@ -136,8 +131,17 @@
 
 <TMPL_IF HTML5><footer id="footer" class="pagefooter"><TMPL_ELSE><div id="footer" class="pagefooter"></TMPL_IF>
 <TMPL_UNLESS DYNAMIC>
+<TMPL_IF HTML5><nav id="sitelinks">
+<a href="/">Inicio</a> | <a href="/wiki">Wiki</a> | <a href="/wiki">Wiki</a> |
+<TMPL_ELSE><div id="sitelinks"></TMPL_IF>
+
+<span class="parentlinks">
+<TMPL_LOOP PARENTLINKS>
+<a href="<TMPL_VAR URL>"><TMPL_VAR PAGE></a>/ 
+</TMPL_LOOP>
+</span>
+
 <TMPL_IF HTML5><nav id="pageinfo"><TMPL_ELSE><div id="pageinfo"></TMPL_IF>
-<TMPL_IF HTML5><nav id="sitelinks"><a href="">Inicio</a><TMPL_ELSE><div id="sitelinks"></TMPL_IF>
 
 <TMPL_IF TAGS>
 <TMPL_IF HTML5><nav class="tags"><TMPL_ELSE><div class="tags"></TMPL_IF>
