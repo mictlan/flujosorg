@@ -1,2 +1,3 @@
-agregar vinculos de navegacion: Inicio, wiki, mapa de sitio, etc
+>agregar vinculos de navegacion: Inicio, wiki, mapa de sitio, etc
 
+agregé vinculos de navegacion al pie de la pagina. con una plantilla modificado que vive en templates/page.tmpl. con estilo para la pie a local.css. marcando como [[hecho]]
