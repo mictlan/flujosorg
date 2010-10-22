@@ -76,7 +76,6 @@ h1, a {
 .pagedate, span .title  {
   display: none;
 }
-/* remove borders from footer */
 #pageinfo {
   border-top: none;
 }
@@ -123,3 +122,18 @@ code:before {
     
     clear:both;
     }
+
+/*footer*/
+#footer {
+  border: 1px solid #ccc;
+  padding: 2px;
+  box-shadow: 0 0 2px rgb(0,0,0);
+  -moz-box-shadow: 0 0 2px rgb(0,0,0);
+  -webkit-box-shadow: 0 0 2px rgb(0,0,0);
+}
+#footer a {
+  color: #b74544;
+}
+#footer #sitelinks a:before {
+        content: " | ";
+}
