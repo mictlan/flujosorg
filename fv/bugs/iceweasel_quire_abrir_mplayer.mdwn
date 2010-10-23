@@ -1,1 +1,3 @@
-iceweasel no debe querer abrir mplayer sino utilizar reproductor del la sistema
+> iceweasel no debe querer abrir mplayer sino utilizar reproductor del la sistemai
+
+ahora no occure porque ya no incluimos mplayer. ahora iceweasel abre vlc. marcando como [[hecho]]
