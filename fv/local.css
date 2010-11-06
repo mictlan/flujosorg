@@ -13,8 +13,8 @@ a:hover {
     text-decoration: underline;
     }
 
-.parentlinks a {
-    color: #000;
+.parentlinks {
+    display: none;
     }
 
 .toc {
