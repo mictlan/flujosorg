@@ -9,3 +9,4 @@ Este espacio esta siendo reconstruido. Si algo esta perdido puede que esta en el
    * [[bugs]]
    * [[lista de cambios|http://github.com/mictlan/flujos-vivos/commits/master]]
    * [[descarga]]
+   * [[contacto]]
