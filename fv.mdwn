@@ -11,5 +11,5 @@ Este espacio esta siendo reconstruido. Si algo esta perdido puede que esta en el
    * [[descarga]]
    * [[contacto]]
  
-Repositorio publico de [[flujos-vivos|flujos-vivos]] y del [[manual|http://github.com/mictlan/flujos-vivos]] disponible en github.
+Repositorio publico de [[flujos-vivos|http://github.com/mictlan/flujos-vivos]] y del [[manual|http://github.com/mictlan/fv-manual]] disponible en github.
 
