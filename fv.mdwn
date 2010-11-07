@@ -10,3 +10,6 @@ Este espacio esta siendo reconstruido. Si algo esta perdido puede que esta en el
    * [[lista de cambios|http://github.com/mictlan/flujos-vivos/commits/master]]
    * [[descarga]]
    * [[contacto]]
+ 
+Repositorio publico de [[flujos-vivos|flujos-vivos]] y del [[manual|http://github.com/mictlan/flujos-vivos]] disponible en github.
+
