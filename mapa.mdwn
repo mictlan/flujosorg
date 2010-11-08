@@ -1,1 +1,2 @@
+#Mapa del Sitio
 [[!map pages="* and !*.js and !*.png and !*.css and !templates* and !wikiicons*"]]
