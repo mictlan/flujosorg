@@ -53,7 +53,9 @@ img {margin: 10px}
 .inline li:before {
     content: " | ";
     }
-
+.inlinepage {
+    border: 0px solid #AAA;
+    }
 #logos {
    display: block;
    margin-top: 25%;
