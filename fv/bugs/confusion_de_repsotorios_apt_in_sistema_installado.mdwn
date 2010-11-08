@@ -1,1 +1,3 @@
-hay que darle mas pruebas y arreglos al installador
+ps [[hecho]] aun que todavia existe un bug en live-build que unicamente aparece el fuente de security en el sources.list de la sitema instalada
+
+> hay que darle mas pruebas y arreglos al installador
