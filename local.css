@@ -130,7 +130,7 @@ code:before {
 
 /*footer*/
 #footer {
-  padding: 2px 5px;
+  padding: 2px 0;
   box-shadow: 0 0 10px rgb(0,0,0);
   -moz-box-shadow: 0 0 10px rgb(0,0,0);
   -webkit-box-shadow: 0 0 10px rgb(0,0,0);
@@ -152,4 +152,5 @@ code:before {
 }
 .parentlinks {
     font-size: 12px;
+    padding 0 5px;
     }
