@@ -5,4 +5,6 @@ body {
 .pageheader, #pageinfo {
         display: block;
             }
-
+#footer #sitelinks .parentlinks {
+            display: none;
+  }
