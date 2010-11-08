@@ -57,7 +57,7 @@ img {margin: 10px}
     border: 0px solid #AAA;
     }
 .actions {
-    border 1px solid #AAA;
+    border: 1px solid #AAA;
     }
 #logos {
    display: block;
@@ -130,7 +130,6 @@ code:before {
 
 /*footer*/
 #footer {
-  border: 1px solid #ccc;
   padding: 2px;
   box-shadow: 0 0 2px rgb(0,0,0);
   -moz-box-shadow: 0 0 2px rgb(0,0,0);
@@ -146,4 +145,6 @@ code:before {
 #footer #sitelinks .parentlinks a:before {
    content: none;
 }
-
+.parentlinks {
+    font-size: 9px;
+    }
