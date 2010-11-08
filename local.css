@@ -130,6 +130,7 @@ code:before {
 
 /*footer*/
 #footer {
+  font-size: 12px;
   padding: 2px 0;
   box-shadow: 0 0 10px rgb(0,0,0);
   -moz-box-shadow: 0 0 10px rgb(0,0,0);
@@ -147,12 +148,10 @@ code:before {
         content: " | ";
 }
 #footer #sitelinks a {
-
     margin: 0 5px;
 }
 #footer #sitelinks .parentlinks a:before {
    content: none;
 }
 .parentlinks {
-    font-size: 12px;
     }
