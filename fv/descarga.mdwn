@@ -3,21 +3,21 @@ Puedes picarle a los enlaces y descargar con cualquier navegador, te recomendamo
 
 En todos casos recomendamos el version mas nuevo disponible. Todos los imagenes estan disponibles aqui:
 
-
 [[http://vivo.flujos.org/download/]]
 
-## CD-vivo ##
+## Imagen Híbrido
 
-imagenes cdrom terminan con .iso. es la opcion mas facil para novatos, pero con menor rendamento. la ordenadora es menos responsiva cuando corre desde cdrom.  y los puede encontrar aqui:
+Para quempar a CDROM o guardar en USB. 
 
-[[http://vivo.flujos.org/download/iso-cdrom]]
+[[http://vivo.flujos.org/download/iso-hybrid]]
 
+### CDROM ###
 
-## USB-vivo ##
+Quemar a CDROM es la opcion mas facil para novatos, pero con menor rendamento. la ordenadora es menos responsiva cuando corre desde cdrom.  y los puede encontrar aqui:
+
+### USB ###
 
 imagenes cdrom terminan con .img y los puede encontrar aqui:
-
-[[http://vivo.flujos.org/download/usb-hdd]]
 
 Esta opcion es un poco mas dificil que quemar un cdrom, y requiere de conociamiento de la sistema. Como ahora vas a copiar el imagen a un particion de disco, debes de fijar en sobrescribir la particion correcto. De otro modo sobrescriberas  otro informacion o tu sistema operativa. Para montar el Flujos Vivos en USB les referimos a el [[http://wiki.debian.org/DebianLive/Howto/USB|wiki de debian-live]]
 
