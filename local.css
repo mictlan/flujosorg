@@ -131,9 +131,17 @@ code:before {
 /*footer*/
 #footer {
   padding: 2px;
-  box-shadow: 0 0 2px rgb(0,0,0);
-  -moz-box-shadow: 0 0 2px rgb(0,0,0);
-  -webkit-box-shadow: 0 0 2px rgb(0,0,0);
+  box-shadow: 0 0 10px rgb(0,0,0);
+  -moz-box-shadow: 0 0 10px rgb(0,0,0);
+  -webkit-box-shadow: 0 0 10px rgb(0,0,0);
+  border: 1px solid #AAA;
+  border-bottom: none;
+  position:fixed;
+  bottom:0;
+  width: 700px;
+  background-color: #dc3c3c;
+
+
 }
 #footer #sitelinks a:before {
         content: " | ";
