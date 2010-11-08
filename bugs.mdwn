@@ -1,6 +1,6 @@
 [[!img staghorn_beetle.png class="right"]]
-
 Problemas y mejoras para flujos.org. Enlacer bugs con [[bugs/hecho]] cuando estan terminados.
 
 [[!inline pages="./bugs/* and !./bugs/hecho and !link(hecho) 
 and !*/Discussion" actions=yes postform=yes show=0]]
+x
