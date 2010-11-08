@@ -146,11 +146,13 @@ code:before {
 #footer #sitelinks a:before {
         content: " | ";
 }
+#footer #sitelinks a {
 
+    padding 0 5px;
+}
 #footer #sitelinks .parentlinks a:before {
    content: none;
 }
 .parentlinks {
     font-size: 12px;
-    padding 0 5px;
     }
