@@ -2,21 +2,21 @@ Nuevo versión de flujos-vivos pos hackmitin y pre resto de la vida. 1.1a es el 
 
 Hemos quitado flujconf del distro mientras que veamos la for hacer algo parecido pero de forma más mantenible y elegante. 
 
-  • actualizamos a debian/testing (alias squeeze)
-  • automatizamos inclusión de manual con ikiwiki y git
-  • utilizamos únicamente paquetes oficiales de debian
-  • utilizamos unicamente debian/main
-  • quitamos flujconf
-  • agregamos scripts para radio en /usr/local/bin/
-  • utilizamos imagen híbrido (un único imagen para usb y cdrom)
-  • lv2 plugins para ardour y jackd (lv2rack)
+   * actualizamos a debian/testing (alias squeeze)
+   * automatizamos inclusión de manual con ikiwiki y git
+   * utilizamos únicamente paquetes oficiales de debian
+   * utilizamos unicamente debian/main
+   * quitamos flujconf
+   * agregamos scripts para radio en /usr/local/bin/
+   * utilizamos imagen híbrido, iso-hybrid (un único imagen para usb y cdrom)
+   * lv2 plugins para ardour y jackd (lv2rack)
 
 lista completa de cambios:
-http://github.com/mictlan/flujos-vivos/commits/master
+[http://github.com/mictlan/flujos-vivos/commits/master]
 
 repo publico del fuente del manual:
-http://github.com/mictlan/fv-manual
+[http://github.com/mictlan/fv-manual]
 
 descarga:
-http://flujos.org/fv/descarga/
+[http://flujos.org/fv/descarga/]
 
