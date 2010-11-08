@@ -12,11 +12,11 @@ Hemos quitado flujconf del distro mientras que veamos la for hacer algo parecido
    * lv2 plugins para ardour y jackd (lv2rack)
 
 lista completa de cambios:
-[http://github.com/mictlan/flujos-vivos/commits/master]
+<http://github.com/mictlan/flujos-vivos/commits/master>
 
 repo publico del fuente del manual:
-[http://github.com/mictlan/fv-manual]
+<http://github.com/mictlan/fv-manual>
 
 descarga:
-[http://flujos.org/fv/descarga/]
+<http://flujos.org/fv/descarga/>
 
