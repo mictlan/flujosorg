@@ -132,11 +132,11 @@
 <TMPL_IF HTML5><footer id="footer" class="pagefooter"><TMPL_ELSE><div id="footer" class="pagefooter"></TMPL_IF>
 <TMPL_UNLESS DYNAMIC>
 <TMPL_IF HTML5><nav id="sitelinks">
-<a href="mapa.html">Mapa del Sitio</a>
 <span class="parentlinks">
 <TMPL_LOOP PARENTLINKS>
 <a href="<TMPL_VAR URL>"><TMPL_VAR PAGE></a>/ 
 </TMPL_LOOP>
+<a href="mapa.html">Mapa del Sitio</a>
 </span>
 <TMPL_ELSE><div id="sitelinks"></nav></TMPL_IF>
 
