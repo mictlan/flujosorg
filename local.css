@@ -148,7 +148,7 @@ code:before {
 }
 #footer #sitelinks a {
 
-    padding 0 5px;
+    margin: 0 5px;
 }
 #footer #sitelinks .parentlinks a:before {
    content: none;
