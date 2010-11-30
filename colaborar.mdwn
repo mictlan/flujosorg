@@ -9,7 +9,7 @@ Nos comunicamos a través de una <a href="https://lists.aktivix.org/mailman/list
 
 ##2. En la comunidad de lxs desarolladores de nuevas versiones del Live-CD flujos-vivo
 
-La plataforma flujos.org es un esfuerzo colaborativo mantenido en ikiwiki, un compilador de html, que utiliza git como motor. Cada unx de nosotrxs contribuye de su manera: programación, investigación de software, edición de manuales, traducciones, diseño gráfico y la administración de la página web. Te interesa [[Aqui puedes ver como colaborar|edita]].
+La plataforma flujos.org es un esfuerzo colaborativo mantenido en ikiwiki, un compilador de html, que utiliza git como motor. Cada unx de nosotrxs contribuye de su manera: programación, investigación de software, edición de manuales, traducciones, diseño gráfico y la administración de la página web. Te interesa [[Aqui puedes ver como colaborar|wiki/edita]].
 
 ##3. Como usuario en flujos.org/wiki 
 
