@@ -2,9 +2,9 @@
 los repositorios ya estan divididos. y el manual ha sido borrado del repo general. ahora los ordenes para clonar, respectivamente, el repo de la pagina y el manual son:
 
 ####Pagina Entera####
-git clone git@flujos:flujosorg.git
+git clone git@flujos.org:flujosorg.git
 
 ####Manual####
-git clone git@flujos:manual.git
+git clone git@flujos.org:manual.git
 
 > Tenemos que dividir el repositorio git en al menos dos. 1) paginas web de flujos.org y 2) el manual de flujos-vivos. sobre todo para poder incluir unicamente el manual en flujos-vivos, ahora que las paginas ocupan algo mas de espacio. 
