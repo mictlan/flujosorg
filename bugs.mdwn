@@ -3,4 +3,3 @@ Problemas y mejoras para flujos.org. Enlacer bugs con [[bugs/hecho]] cuando esta
 
 [[!inline pages="./bugs/* and !./bugs/hecho and !link(hecho) 
 and !*/Discussion" actions=yes postform=yes show=0]]
-x
