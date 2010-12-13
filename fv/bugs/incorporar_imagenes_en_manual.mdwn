@@ -1,1 +1,1 @@
-incorporar [imagenes|http://flujos.org/images/flujos-vivos/] en [manual|http://flujos.org/fv/manual/] 
+incorporar [[imagenes|http://flujos.org/images/flujos-vivos/]] en [[manual|http://flujos.org/fv/manual/]]
