@@ -4,16 +4,16 @@ imagenes si encuentran em:
 
 ##optimizacion
 
-por lo general son muy grande por el uso en web. es muy recomendable reducirlos de tamaño, y optimizarlos. si puede utilzar imagemagic para eso. el tomaño original de <b>Chango en playa.png</b> es 1.3M. El tamaño resultante, <b>Chango en playa-900px.png</b>, es de 72K. Es una muy gran difrencia. El resulto si logro por reducir el tamaño del imagen a un ancho de 900px, igual al ancho del cuerpo del manual, aseturando que utiliamos un resolucion de 90dpi, y un reducion a unicamente los 7 colores realmente existentes en el imagen: 
+por lo general son muy grande por el uso en web. es muy recomendable reducirlos de tamaño, y optimizarlos. si puede utilzar imagemagic para eso. el tomaño original de <b>Chango en playa.png</b> es 1.3M. El tamaño resultante, <b>Chango en playa-900px.png</b>, es de 72K. Es una muy gran difrencia. El resulto si logro por reducir el tamaño del imagen a un ancho de 900px, igual al ancho del cuerpo del manual, y un reducion a unicamente los 7 colores realmente existentes en el imagen: 
 
-    convert -resize 900 -units pixels-per-inch -posterize 7 +dither Chango\ en\ playa.png Chango\ en\ playa-900px.png 
+    convert -resize 900 -posterize 7 +dither Chango\ en\ playa.png Chango\ en\ playa-900px.png 
 
 ##css
 como hacemos por diferenciar las imagenes entre paginas? un distinto fondo para cada pagina, por ejemplo...
 
 los meta tags de ikiwiki quiza nos sirvirá. al poner el siguinte tag en index.html del manual, ikiwiki incluirá el enlace hasta la oja de estilo <b>navigacion.css</b>
 
-    [[!meta stylesheet=navegacion rel="stylesheet" title="navegacion"]]
+        [[!meta stylesheet=navegacion rel="stylesheet" title="navegacion"]]
 
 
 luego toca a uno creer el fichero navigacion.css en la carpeta.
