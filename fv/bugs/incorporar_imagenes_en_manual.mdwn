@@ -1,5 +1,4 @@
 incorporar [[imagenes|http://flujos.org/images/flujos-vivos/]] en [[manual|http://flujos.org/fv/manual/]]
 
->tambien ver:
->
->[http://flujos.org/wiki/trabajo_grafico_de_manual/]
+ver:
+[http://flujos.org/wiki/trabajo_grafico_de_manual/]
