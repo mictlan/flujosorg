@@ -8,3 +8,7 @@ body {
 #footer #sitelinks .parentlinks {
             display: none;
   }
+
+pre {
+    margin: 0 1em;
+    }
