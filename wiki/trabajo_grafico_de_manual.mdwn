@@ -17,8 +17,19 @@ Por lo general son muy grandes para el uso en la web. Es recomendable reducirlas
 
 Otra opción es usar formato jpg ya que son mas ligeras y 'jugar' con el parámetro de la calidad(-quality) en combinación con el redimencionamiento(-resize).
 
-P.e. Redimensionar todas las imágenes de una carpeta que se encuentran en formato jpg.
+**Mas ejemplos**
+> Hacer una copia todas las imágenes y generar sus respectivas imágenes pequeñas(-resize 110x150) para avatar, de la carpeta actual en donde nos interesan las que se encuentran en formato _jpg_, además reducimos 50% la calidad (-quality), respecto a la orinal.
 las instrucciones podrían ser:
+
+    #creamos una con el nombre avatars
+    mkdir avatars
+    #
+    for img in *.jpg
+    do
+        convert $img -resize 110x150 -strip -quality 50 -interlace line ./avatars/$img
+    done
+
+>Si queremos un avatar con otras características p.e. ejemplo un tamaño de 220x300 y ahora una calidad del 80,esto lo podemos hacer con mover a los parámetros _resize_ , _quality_ del convert respectivamente. Por otra parte podemos renombrar y/o cambiar el nombre/directorio destino dentro del ciclo _for_, en este caso vamos agregarle \_avatar al final del nombre de cada imagen.
 
     #directorio que vamos a utilizar para almacenar las imgs
     export path='./directorio_destino/'
@@ -28,18 +39,19 @@ las instrucciones podrían ser:
     	echo $img
     	img=`echo $img | cut -c-4`
     	src=$path/$img\_src.jpg
-    	mini=$path/$img\_thumbnail.jpg
+    	mini=$path/$img\_avatar.jpg
     	cp $img.JPG $src
-    	convert $src -resize 110x150 -strip -quality 100 -interlace line $mini
+    	convert $src -resize 220x300 -strip -quality 80 -interlace line $mini
     done
 
-Para redimensionar todos los directorios de forma recursiva se podría hacer con un find bajo una con una expresión regular(-iregex).
+>Para re-dimensionar masivamente *p.e.* todos los directorios de forma recursiva, esto se podría hacer con un find bajo una con una expresión regular(-iregex).
 
     for img in $(find ./ -iregex ".*\(jpg\|png\|gif\)$")
     do
         echo $img
         #código re redimencionamiento.
-        #
+        #o alguna otra accion p.e borrar el archivo
+        #rm $img
     done
 
 ##Uso de nombres mas semánticos.
