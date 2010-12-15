@@ -1,3 +1,5 @@
+[[!meta stylesheet=estilo-codigos rel="stylesheet" title="estilo-codigos"]]
+
 Respecto a la optimización de imágenes para la web imagenes se encuentran en:
 
 <http://flujos.org/images/flujos-vivos/>
@@ -40,6 +42,11 @@ Para redimensionar todos los directorios de forma recursiva se podría hacer con
         #
     done
 
+##Uso de nombres mas semánticos.
+
+Es buena practica re-nombrar a los archivos tal que estos tengan un significado semántico(evitar 001.png, 002.png, etc..), los navegadores en las  URLs suelen suelen sustituir el espacio en blanco por '%20' lo cual en ocaciones genera urls dificiles de entender a simple vista, para evitar esto podemos renombrar espacios en blanco de los archivos de una carpeta por el símbolo guión bajo (_).
+
+    rename 's/\s+/_/' *
 
 
 ##css
