@@ -54,7 +54,7 @@ como hacemos por diferenciar las imagenes entre paginas? un distinto fondo para 
 
 los meta tags de ikiwiki quiza nos sirvirá. al poner el siguiente tag en index.html del manual, ikiwiki incluirá el enlace hasta la hoja de estilo <b>navigacion.css</b>
 
-        [[!meta stylesheet=navegacion rel="stylesheet" title="navegacion"]]
+        \[\[\!meta stylesheet=navegacion rel="stylesheet" title="navegacion"\]\]
 
 
 luego toca a uno creer el fichero navigacion.css en la carpeta.
