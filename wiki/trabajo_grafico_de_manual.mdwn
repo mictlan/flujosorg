@@ -1,17 +1,51 @@
-imagenes si encuentran em:
+Respecto a la optimización de imágenes para la web imagenes se encuentran en:
 
 <http://flujos.org/images/flujos-vivos/>
 
-##optimizacion
+##optimización de imagenes
 
-por lo general son muy grande por el uso en web. es muy recomendable reducirlos de tamaño, y optimizarlos. si puede utilzar imagemagic para eso. el tomaño original de <b>Chango en playa.png</b> es 1.3M. El tamaño resultante, <b>Chango en playa-900px.png</b>, es de 72K. Es una muy gran difrencia. El resulto si logro por reducir el tamaño del imagen a un ancho de 900px, igual al ancho del cuerpo del manual, y un reducion a unicamente los 7 colores realmente existentes en el imagen: 
+Por lo general son muy grandes para el uso en la web. Es recomendable reducirlas de tamaño y optimizarlas. Se puede utilizar el imagemagic para este objetivo. El tamaño original de <b>Chango en playa.png</b> es 1.3M. El tamaño resultante, <b>Chango en playa-900px.png</b>, es de 72K. Es una muy gran diferencia. El resulto si logro por reducir el tamaño del imagen a un ancho de 900px, igual al ancho del cuerpo del manual, y un reducion a unicamente los 7 colores realmente existentes en el imagen: 
 
     convert -resize 900 -posterize 7 +dither Chango\ en\ playa.png Chango\ en\ playa-900px.png 
+
+###Opciones del convert útiles para la optimización.
+ - **-posterize** número de colores(indexado).
+ - **-resize**   redimencionado (anchoXalto en pixeles).
+ - **-quality** Calidad expresado en un rango de 0-100.
+
+Otra opción es usar formato jpg ya que son mas ligeras y 'jugar' con el parámetro de la calidad(-quality) en combinación con el redimencionamiento(-resize).
+
+P.e. Redimensionar todas las imágenes de una carpeta que se encuentran en formato jpg.
+las instrucciones podrían ser:
+
+    #directorio que vamos a utilizar para almacenar las imgs
+    export path='./directorio_destino/'
+    #
+    for img in *jpg
+    do
+    	echo $img
+    	img=`echo $img | cut -c-4`
+    	src=$path/$img\_src.jpg
+    	mini=$path/$img\_thumbnail.jpg
+    	cp $img.JPG $src
+    	convert $src -resize 110x150 -strip -quality 100 -interlace line $mini
+    done
+
+Para redimensionar todos los directorios de forma recursiva se podría hacer con un find bajo una con una expresión regular(-iregex).
+
+    for img in $(find ./ -iregex ".*\(jpg\|png\|gif\)$")
+    do
+        echo $img
+        #código re redimencionamiento.
+        #
+    done
+
+
 
 ##css
 como hacemos por diferenciar las imagenes entre paginas? un distinto fondo para cada pagina, por ejemplo...
 
-los meta tags de ikiwiki quiza nos sirvirá. al poner el siguinte tag en index.html del manual, ikiwiki incluirá el enlace hasta la oja de estilo <b>navigacion.css</b>
+los meta tags de ikiwiki quiza nos sirvirá. al poner el siguiente tag en index.html del manual, ikiwiki incluirá el enlace hasta la hoja de estilo <b>navigacion.css</b>
 
         [[!meta stylesheet=navegacion rel="stylesheet" title="navegacion"]]
 
