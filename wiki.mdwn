@@ -1,3 +1,5 @@
+[[!meta stylesheet=index rel="stylesheet" title="index"]]
+[[!meta description="Documentación relacionado a flujos.org"]]
+
 # Documentación relacionado a flujos.org
-Una lista de paginas de documentación
 [[!inline  pages="wiki/* and !*.css and !*/Discussion " show="0" archive="yes"]]

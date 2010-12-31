@@ -1,0 +1,8 @@
+#pagebody #content p {
+    float: left;
+    margin: 10px;
+    text-transform : capitalize;
+}
+#pagebody #content i {
+    font-size: 75%;
+    }
