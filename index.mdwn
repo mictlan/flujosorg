@@ -1,4 +1,5 @@
 [[!meta title="flujos.org"]]
+[[!meta description="Laboratorio de Multimedia en la red, Radio y Software Libre"]]
 <img src="http://flujos.org/images/logo_nobg.png" class="left"/>
 #Flujos.org 
 Laboratorio de Multimedia en la red, Radio y Software Libre.
