@@ -1,0 +1,29 @@
+#Real Time Network Audio
+
+estas idicaciones son para jack2, tambien conocido como jackdmp. 
+
+tienes 2 computadoras, el maestro y el esclavo.  el maestro tiene tarjeta de aduio y red. el esclavo red unicamente. en mi caso todo mi musica esta en el esclavo, lo cual tiene instalado mpd. 
+
+## Maestro
+
+en el maestro arrancas jackd como siempre y luego: 
+
+    jack_load netmanager -i "-a 192.168.2.1"
+
+asi pidimos a dbus que si carga el chofer de la red de jackd. el "-i" nos permite pasar un opciones a ello, y los opcione necesario es el direccion del mismo maestro dentro del red local. 
+
+despues de arrancar el eslavo, aparecerá su "hostname" dentro los conexciones del maestro.  y si puede conectar a la salida de sistema, en mi caso, para que la musica sale a las bocinas. si no vez el "hostname" del esclavo, mas seguro no los has arrancada todavia. 
+
+## Esclavo
+
+en el esclavo arrancamos jackd con el motor de la red. 
+
+    jackd -d net -a 192.168.2.1  -C 0
+
+los dimos el direccion del maestro y en nuestra ejemplo no utilizamos nigun canal de captura: "-C 0".
+
+### MPD
+
+necesitas configurar las salidas de mpd, [[ver el documentacion|http://mpd.wikia.com/wiki/Configuration#Audio_Outputs]] y hacer que conecta a jackd. 
+
+
