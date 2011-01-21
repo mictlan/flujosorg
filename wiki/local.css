@@ -11,4 +11,10 @@ body {
 
 pre {
     margin: 0 1em;
+    padding: .5em;
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+    font-size: 110%;
     }
+
