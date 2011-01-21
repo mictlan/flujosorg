@@ -1,6 +1,6 @@
-#Como utilizar jackd para pasar audio sobre la red
+#Real Time Network Audio
 
-esas idicaciones son para jack2, tambien conocido como jackdmp. 
+estas idicaciones son para jack2, tambien conocido como jackdmp. 
 
 tienes 2 computadoras, el maestro y el esclavo.  el maestro tiene tarjeta de aduio y red. el esclavo red unicamente. en mi caso todo mi musica esta en el esclavo, lo cual tiene instalado mpd. 
 
@@ -24,7 +24,6 @@ los dimos el direccion del maestro y en nuestra ejemplo no utilizamos nigun cana
 
 ### MPD
 
-necesitas configurar las salidas de mpd, [[ver el documentacion|
-http://mpd.wikia.com/wiki/Configuration#Audio_Outputs]] y hacer que conecta a jackd. 
+necesitas configurar las salidas de mpd, [[ver el documentacion|http://mpd.wikia.com/wiki/Configuration#Audio_Outputs]] y hacer que conecta a jackd. 
 
 
