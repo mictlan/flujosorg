@@ -1,8 +1,8 @@
-#Real Time Network Audio
+#Netjack, Real Time Network Audio
 
-estas idicaciones son para jack2, tambien conocido como jackdmp. 
+estos son idicaciones para mover Audio de Alta Calidad en el red utilizando jackd. Especificamente son para jack2, tambien conocido como jackdmp. Los comandos son un poco distinto, pero tambien lo puedes hacer con jack1. 
 
-tienes 2 computadoras, el maestro y el esclavo.  el maestro tiene tarjeta de aduio y red. el esclavo red unicamente. en mi caso todo mi musica esta en el esclavo, lo cual tiene instalado mpd. 
+tienes 2 computadoras, el maestro y el esclavo.  el maestro tiene tarjeta de audio y red. el esclavo red unicamente. en mi caso todo mi musica esta en el esclavo, lo cual tiene instalado mpd. 
 
 ## Maestro
 
@@ -12,9 +12,9 @@ en el maestro arrancas jackd como siempre y luego:
 
 asi pidimos a dbus que si carga el chofer de la red de jackd. el "-i" nos permite pasar un opciones a ello, y los opcione necesario es el direccion del mismo maestro dentro del red local. 
 
-en el maestro si configura la frecuencia de muestra y el periodo del buffer de jackd. a 22050 muestras por segundo (y con adecuado MTU definido en el cliente) si logra un calida pasable. Nuestro objectivo es modesto dado la calidad de las bocinas reproduciendo la musica. 
+en el maestro si configura la frecuencia de muestra y el periodo del buffer de jackd. a 22050 muestras por segundo (y con adecuado MTU definido en el esclavo) si logra un calida pasable. Nuestro objectivo es modesto dado la calidad de las bocinas reproduciendo la musica. 
 
-despues de arrancar el eslavo, aparecerá su "hostname" dentro los conexciones del maestro.  y si puede conectar a la salida de sistema, en mi caso, para que la musica sale a las bocinas. si no vez el "hostname" del esclavo, mas seguro no los has arrancada todavia. 
+despues de arrancar el eslavo, aparecerá su "hostname" dentro los conexciones del maestro.  y si puede conectar a la salida de sistema, en mi caso, para que la musica sale a las bocinas. si no vez el "hostname" del esclavo, mas seguro no haz arrancada netjack en ello. 
 
 ## Esclavo
 
@@ -23,6 +23,12 @@ en el esclavo arrancamos jackd con el motor de la red.
     jackd -d net -a 192.168.2.1  -C 0 -M 500 
 
 los dimos el direccion del maestro y en nuestra ejemplo no utilizamos nigun canal de captura: "-C 0". limitamos el MTU a 500KB/s, um pues algo asi. junto con la asignacion del la frequencia de muestra a 22050 logramos un uso total de alreadador de ~350KBs de la banda ancha. con una frequencia de muestra de 44100 si incramenta mas ~600 ~650KBs. 
+
+Ah y si quieres escuchar el audio localmente (a traves la tarjeta de audio del esclavo) hay dos opciones. Si no te importa que no sea siempre perfectamente sincronizadas las dos maquinas, puedes configurar dos salidas de audio en mpd.conf, uno a alsa con dmix y la otra a jack. Pero mas probable vas a quierer que jackd maneja el audio en las dos tarjetas, en este caso en el esclavo cargarias el adaptador de audio:
+
+    jack_load audioadapter
+    
+ahora en los conexciones de jackd veras audioadpater, y conectas MPD a ello y felicidades tienes audio en tiempo real sincronizada entre las dos tarjetas de audio de dos PCs. 
 
 ### MPD
 
