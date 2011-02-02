@@ -2,7 +2,15 @@
 
 Éstas son indicaciones para mover Audio de Alta Calidad en el red utilizando jackd. Específicamente son para jack2, también conocido como jackdmp. Los comandos son un poco distintos, pero también lo puedes hacer con jack1. 
 
+Ojo, ademas de diferncias entre versiones de jack1 y jack2 tambien existe netjack1 y netjack2. El [[wiki de jackd|http://trac.jackaudio.org/]] tiene bastante informacion. Actualmente, una difencia importante entre los dos versiones de netjack, es que netjack1 binda mayor reducion de banda ancha necesario atreves del codec celt, permitiendo su uso inclusive sobre el internet. 
+
 Tienes 2 computadoras, el maestro y el esclavo. El maestro tiene tarjeta de audio y red. El esclavo red únicamente, en mi caso todo mi música está en el esclavo, el cual tiene instalado mpd. 
+
+#Netjack1
+
+Falta terminar indicaciones sobre netjack1. Hasta entonces si ver el [[wiki de jackd|http://trac.jackaudio.org/]]
+
+#Netjack2
 
 ## Maestro
 
