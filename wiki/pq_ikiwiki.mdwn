@@ -14,9 +14,9 @@ Has oido del CMS, o manejador de contenidos. Git es un DMS, diretory management 
 
 ## Markdown
 
-Markdown es un sintaxis para edicion de documentos en base de un numero reducido de opciones de html. Es mucho mas facil aprender markdown, pero tambien menos poderoso. Por suerte ikwiki permita complementar el markdown con html en los casos que es demaisada limitada. 
+Markdown es una sintaxis para edicion de documentos en base de un numero reducido de opciones de html. Es mucho mas facil aprender markdown, pero tambien menos poderoso. Por suerte ikwiki permita complementar el markdown con html en los casos que es demasiada limitada. 
 
-## Systema Distruibuida
+## Sistema Distruibuido
 
 Podemos utilizar git para mantener dos paginas autonomos pero sincronizadas. Si uno ya no esta la otra sigue. Y cuando si puede y quiere si pueden actualizarsi entre los dos. Estos actualizaciones pueden ser automatizadas. 
 
