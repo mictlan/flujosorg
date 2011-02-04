@@ -1,0 +1,3 @@
+las imagenes representan un peso mucho mayor que los pocos textos en el manual. si estan en el mismo repo de git, editores de textos tendran que descargarlos sin necesidad.
+
+
