@@ -1,3 +1,13 @@
-las imagenes representan un peso mucho mayor que los pocos textos en el manual. si estan en el mismo repo de git, editores de textos tendran que descargarlos sin necesidad.
+>las imagenes representan un peso mucho mayor que los pocos textos en >el manual. si estan en el mismo repo de git, editores de textos >tendran que descargarlos sin necesidad.
 
+[[hecho]]. imagenes si encuentra en la rama imagenes, para clonarlo:
 
+    git clone --branch imagenes git@flujos.org:manual.git
+
+o para jalarlos y crear una rama equivalente en su repo personal:
+
+    git pull git@flujos.org:manual.git +imagenes:imagenes
+
+y para empuar los imagenes al servidor, despues de haber los modificado:
+
+   git push git@flujos.org:manual.git +imagenes:imagenes
