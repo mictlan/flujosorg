@@ -29,6 +29,7 @@ el manual ha sido seperado en su proprio repositorio para clonarlo es:
 [[!template  id=note text="""Premier revisa [[mas comandos de git|mas_comandos_de_git]] y luego para ver mas posibilidades, conoce usted la [[la magia de git|http://www-cs-students.stanford.edu/~blynn/gitmagic/intl/es/]]."""]]
 
 
+eso te deja una carpeta "manual" con las ficheros adentro. las que ten van a intersar son los *.mdwn. 
 
 ## Editar 
 
@@ -53,7 +54,6 @@ cuando compremetemos los cambios es necesario dejar un mensaje para que los dema
 y listo! Ya puedes revisar tus cambios en el sitio.
 
 #### Imagenes ####
-eso te deja una carpeta "manual" con las ficheros adentro. las que ten van a intersar son los *.mdwn. 
 
 Los imagenes del manual han sidos excluidos para optimizar el intercambio entre los que trabajan unicamente sobre los textos. Pero si puede obternerlos facilmente utlizando el mismo git por jalar la rama de imagenes. asegurase que esta dentrtro del repositorio que clonaste arriba:
 
