@@ -61,7 +61,7 @@ Los imagenes del manual han sidos excluidos para optimizar el intercambio entre 
 
 Ahora para jalar los imagenes:
 
-   git pull git@flujos.org:manual.git +imagenes:imagenes
+    git pull git@flujos.org:manual.git +imagenes:imagenes
 
 Ahora haz agregado la rama imagenes a su repositorio. Lo puede confirmar con
 
