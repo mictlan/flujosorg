@@ -19,6 +19,7 @@ ahora encontraras un fichero id_rsa.pub en la carpeta .ssh de tu home, nos la ma
     git clone git@flujos.org:flujosorg.git
 
 
+
 eso te deja una carpeta "flujosorg" con las ficheros adentro. las que ten van a intersar son los *.mdwn
 ### Manual ###
 
@@ -50,6 +51,8 @@ cuando compremetemos los cambios es necesario dejar un mensaje para que los dema
 ### Empujar los cambios al servidor
 
     git push 
+
+[[!template  id=note text="""Ojo! para empujar (push) necesitas primer configurar ssh que utiliza el puerto correcto. <b>man ssh_config</b>]]."""]]
 
 y listo! Ya puedes revisar tus cambios en el sitio.
 
