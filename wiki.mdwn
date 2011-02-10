@@ -2,4 +2,4 @@
 [[!meta description="Documentación relacionado a flujos.org"]]
 
 # Documentación relacionado a flujos.org
-[[!inline  pages="wiki/* and !*.css and !*/Discussion " show="0" archive="yes"]]
+[[!inline  pages="wiki/* and !*.css and !*.png and !*/Discussion " show="0" archive="yes"]]
