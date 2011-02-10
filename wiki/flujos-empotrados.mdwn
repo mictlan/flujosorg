@@ -1,0 +1,42 @@
+
+[[!img sin_filtros-top.png class="align-left"]]
+
+Esta oja contendra informacion relevante a flujos y sistemas empotradas. 
+por ahora no representa la instalacion de flujos-vivos en alguna SoC, sino empezamos con la instalacion de debian/squeeze y aplcaciones de relevantes a flujos y multimedia en la red. 
+
+estamos probando con el [[beagleboard|http://beagleboard.org/]] (revision c3), que trae el procesado Arm Cortex A8 (OMAP) 
+
+## Installar debian en beagleboard
+
+[[http://elinux.org/BeagleBoardDebian]]
+
+agarrar el codigo y instalarlo al tarjeta SD. aqui -mmc refiera a disponitivo de la tarjeta SD. cuida utilizar el nombre de disponitivo correcto. 
+
+    git clone git://github.com/RobertCNelson/netinstall-omap.git
+
+[[!img sin_filtros-side.png class="align-right"]]
+
+para utlizar 2.6.35 en lugar de 2.6.37:
+
+    git revert 6441a1e9
+
+para copiar lo necesario al SD (edita /dev/sdX)
+
+    ./mk_mmc.sh --mmc /dev/sdX --uboot beagle --distro squeeze --firmware
+
+ahora mueva el SD (MMC) al beagle y dele corriente. al prompt configura el cargador de arranque. 
+
+##temas de investigacion
+
+  * checar cron utiliza 100% cpu
+  * en algun momento mpd empeza cortar -- pq?
+  * darkice ?
+  * jackd ?
+  * idjc ?
+  * export X sobre ssh ?
+
+##imagenes
+
+[[!img sin_filtros-open.png class="align-left"]]
+[[!img sin_filtros-bottom.png class="align-left"]]
+[[!img sin_filtros-side2.png class="align-left"]]
