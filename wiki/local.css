@@ -1,6 +1,7 @@
 body {
     margin: 1em;
     }
+a {color: #000}
 
 .pageheader, #pageinfo {
         display: block;
