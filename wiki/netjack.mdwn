@@ -1,14 +1,40 @@
 #Netjack, Real Time Network Audio
+[[!template  id=note text="""[[!toc levels=3]]"""]]
 
-Éstas son indicaciones para mover Audio de Alta Calidad en el red utilizando jackd. Específicamente son para jack2, también conocido como jackdmp. Los comandos son un poco distintos, pero también lo puedes hacer con jack1. 
+     man jackd
 
-Ojo, ademas de diferncias entre versiones de jack1 y jack2 tambien existe netjack1 y netjack2. El [[wiki de jackd|http://trac.jackaudio.org/]] tiene bastante informacion. Actualmente, una difencia importante entre los dos versiones de netjack, es que netjack1 binda mayor reducion de banda ancha necesario atreves del codec celt, permitiendo su uso inclusive sobre el internet. 
+[[!template  id=note text="""[[wiki jackd|http://trac.jackaudio.org/]] | [[manual jackd|http://trac.jackaudio.org/wiki/jackd%281%29]]"""]]
+
+Éstas son indicaciones para mover Audio de Alta Calidad en el red utilizando jackd. Específicamente son para jack2, también conocido como jackdmp. Los comandos son un poco distintos, pero también lo puedes hacer con jack1. Es util preguntar a jack mismo que version tenemos instalado:
+
+    jackd -V
+
+[[!template  id=note text="""jack1 +-= 0.11x, jack2 +-= 1.9.x"""]]
+
+Ojo, ademas de diferncias entre versiones de jack1 y jack2 tambien existe netjack1 y netjack2. Actualmente, una difencia importante entre los dos versiones de netjack, es que netjack1 binda mayor reducion de banda ancha necesario atreves del codec celt, permitiendo su uso inclusive sobre el internet. 
 
 Tienes 2 computadoras, el maestro y el esclavo. El maestro tiene tarjeta de audio y red. El esclavo red únicamente, en mi caso todo mi música está en el esclavo, el cual tiene instalado mpd. 
 
+Independientamente si ocpuas netjack 1 o 2 primer paso es arrancar jackd en maestro utilizando el chofer de alsa. asi que la podemos hacer de una vez algo como:
+
+    jackd -dalsa -dhw:0 -r44100
+
 #Netjack1
 
-Falta terminar indicaciones sobre netjack1. Hasta entonces si ver el [[wiki de jackd|http://trac.jackaudio.org/]]
+En jack2, netjack1 si llama "netone" (one=1). En jack1 es "net" nada mas. jackd proprociona ayuda sobre sus choferes de audio. para ver que opciones podemos aplicar a netjack1: 
+##Escalvo
+    jackd -d netone --help
+
+ya arranca jackd en el esclavo con:
+
+    jackd -d netone 
+
+
+##Maestro
+y en e maestro: 
+
+    jack_netsource -H <esclavo jack hostname>
+
 
 #Netjack2
 
@@ -38,6 +64,6 @@ Si quieres escuchar el audio localmente (a través de la tarjeta de audio del es
 
 ahora en las conexiones de jackd veras audioadpater, y conectas MPD a ello y felicidades, tienes audio en tiempo real sincronizado entre las dos tarjetas de audio de dos PCs. 
 
-### MPD
+# MPD
 
 Necesitas configurar las salidas de mpd, [[ver la documentación|http://mpd.wikia.com/wiki/Configuration#Audio_Outputs]] y hacer que conecte a jackd. 
