@@ -1,0 +1,77 @@
+#!/usr/bin/perl -w 
+#
+# esta script leyerá la hora actual en mpd, al terminar la canción actual. 
+# no funcionara (todavia) en modo ruleta/aleatorio
+# necesitas tener los ficheros de audio de la hora en $ABS_PATH. 
+# ademas de mpd, necesitas mpc
+# apt-get install mpc
+
+$ABS_PATH="/var/lib/mpd/music/tiempo"; #ruta absoluta hacia biblioteca de la hora
+$MPD_PATH="tiempo"; #ruta a la misma pero relativa a biblioteca de mpd
+$MPC="/usr/bin/mpc";
+$FNAME="lahora.ogg"; # nombre de archivo de la hora
+$JINGLE="$MPD_PATH/$FNAME";
+# seconds we subtract from timeRemaining 
+#$DMINUS="10";
+
+sub time2secs
+    {
+       $_[0] =~ /(\d):(\d\d)/;
+       $1 * 60 + $2;
+    }
+
+sub getFile
+    {
+    open(IN, "<$_[0]");
+    binmode IN;
+    my ($data, $n, $offset);
+    while (($n = read IN, $data, 4, $offset) != 0) 
+        { 
+        $offset += $n; 
+        } 
+    close IN;
+    return $data; 
+    }
+
+    open(MPC,"mpc |") || die "Failed: $!\n";
+    my @lines = <MPC>;
+    #$now_playing = shift(@lines); #cancion actua
+    for (@lines)
+	{
+        chomp($_);
+
+	# get info from mpc
+        /\[(.*)\]\s#(\d*)\/(\d*)\s\s\s(\d:\d\d)\/(\d:\d\d)/;
+        $status = $1; 
+        $current_song = $2;
+        $last_song = $3;
+        $position = $4;
+        $duration = $5;
+	}
+
+    die "Mpd not playing, bye\n" unless ("$status" eq "playing");
+    $next_song = $current_song+1;
+    print "agregar $JINGLE";
+    system("$MPC add $JINGLE") == 0 or die "mpc failure ($?): $!";
+    if ($last_song != $current_song)
+	{
+    	print "mover $JINGLE de $last_song $next_song";
+        $last_song = $last_song+1;
+    	system("$MPC move $last_song $next_song")  == 0 or die "mpc failure ($?): $!";
+	}
+    $duration = time2secs($duration);
+    $position = time2secs($position);
+    $time_remaining = $duration - $position;
+    sleep $time_remaining;
+    @timeData = localtime(time);
+    $min = $timeData[1]; 
+    $hour = $timeData[2];
+    print $ABS_PATH. "/HRS". $hour. ".ogg";
+    open(OUT, ">$ABS_PATH/$FNAME") or die $!;
+    print OUT getFile("$ABS_PATH/HRS$hour.ogg");
+    close OUT;
+    open(OUT, ">>$ABS_PATH/$FNAME") or die $!;
+    print OUT getFile("$ABS_PATH/MIN$min.ogg");
+    close OUT;
+    sleep 5;
+    system("$MPC del $next_song")  == 0 or die "mpc failure ($?): $!";
