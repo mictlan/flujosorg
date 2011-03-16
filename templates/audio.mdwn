@@ -1,0 +1,2 @@
+<div class="<TMPL_VAR align> notebox audio"><h6>Escucha</h6><audio src=<TMPL_VAR src> controls="controls"><TMPL_IF nocando><TMPL_VAR nocando><TMPL_ELSE>Tu navegardor de web no puede reporducir la radio, pique <a href="http://www.mozilla-europe.org/es/firefox/">aqui para instalar firefox</a></TMPL_IF></audio><a href="<TMPL_VAR src>" title="enlace directo">Enlace Directo</a></div>
+
