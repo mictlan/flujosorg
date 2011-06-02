@@ -11,15 +11,20 @@ ahora vamos a darles nombres a las ubicaciones del $FUENTE y la carpeta destino,
     FUENTE=~/wiki
     DESTINO=~/public_html/wiki
 
-ahora puedes compilar el wiki:
+
+####Agregando host flujos.local como localhosts
+
+para asegurarnos que la configuración del hosts `flujos.local` este apuntando a nuestro `loopback`(_localhost_) se recomienda ejecutar como super usuario(_root_):
+
+	grep -q -v "flujos.local" /etc/hosts &&  { echo '127.0.0.1	flujos.local' > /etc/hosts; }
+
+####Generando los documentos HTML 
+
+Ahora puedes compilar el wiki:
 
     ikiwiki --verbose $FUENTE $DESTINO --url=http://flujos.local/ --dumpsetup ikiflujos-wiki.setup
 
-el fijense que elegimos el **URL** `flujos.local`, lo cual apunta a _localhost_ en nuestra `/etc/hosts.` y es el nombre del domino configurado en nuestra servidor web.
-
-para asegurarnos que exista dicha configuración de `flujos.local` apuntando a nuestro _loopback_ se recomienda ejecutar como super usuario(_root_):
-
-	grep -q -v  -E "^flujos.local" /etc/hosts &&  { echo '127.0.0.1	flujos.local' > /etc/hosts; }
+>fijense que elegimos el **URL** `flujos.local`, lo cual apunta a _localhost_ en nuestra `/etc/hosts.` y es el nombre del domino configurado en nuestra servidor web.
 
 Felicidades el **html** te espera en $DESTINO. es únicamente apuntar el servidor de _web_ a ello. puede ser que algunas cosas no correspondan, mas probable por diferencias entre tu wiki.setup y la que existe en el servidor. un _plugin_ que no esta activado por ejemplo. sencillamente abrir el `flujos-wiki.setup` en un editor de textos y altera la configuración. 
 
