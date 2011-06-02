@@ -6,7 +6,7 @@ Respecto a la optimización de imágenes para la web imagenes se encuentran en:
 
 ##optimización de imagenes
 
-Por lo general son muy grandes para el uso en la web. Es recomendable reducirlas de tamaño y optimizarlas. Se puede utilizar el imagemagic para este objetivo. El tamaño original de <b>Chango en playa.png</b> es 1.3M. El tamaño resultante, <b>Chango en playa-900px.png</b>, es de 72K. Es una muy gran diferencia. El resulto si logro por reducir el tamaño del imagen a un ancho de 900px, igual al ancho del cuerpo del manual, y un reducion a unicamente los 7 colores realmente existentes en el imagen: 
+Por lo general son muy grandes para el uso en la web. Es recomendable reducirlas de tamaño y optimizarlas. Se puede utilizar el imagemagic para este objetivo. El tamaño original de **Chango en playa.png es 1.3M. El tamaño resultante, <b>Chango en playa-900px.png</b>, es de 72K. Es una muy gran diferencia. El resulto si logro por reducir el tamaño del imagen a un ancho de 900px, igual al ancho del cuerpo del manual, y un reducion a unicamente los 7 colores realmente existentes en el imagen: 
 
     convert -resize 900 -posterize 7 +dither Chango\ en\ playa.png Chango\ en\ playa-900px.png 
 
@@ -49,20 +49,20 @@ las instrucciones podrían ser:
     for img in $(find ./ -iregex ".*\(jpg\|png\|gif\)$")
     do
         echo $img
-        #código re redimencionamiento.
+        #código re dimensionamiento.
         #o alguna otra accion p.e borrar el archivo
         #rm $img
     done
 
 ##Uso de nombres mas semánticos.
 
-Es buena practica re-nombrar a los archivos tal que estos tengan un significado semántico(evitar 001.png, 002.png, etc..), los navegadores en las  URLs suelen suelen sustituir el espacio en blanco por '%20' lo cual en ocaciones genera urls dificiles de entender a simple vista, para evitar esto podemos renombrar espacios en blanco de los archivos de una carpeta por el símbolo guión bajo (_).
+Es buena practica re-nombrar a los archivos tal que estos tengan un significado semántico(evitar 001.png, 002.png, etc..), los navegadores en las  URLs suelen suelen sustituir el espacio en blanco por '%20' lo cual en ocasiones genera urls difíciles de entender a simple vista, para evitar esto podemos renombrar todos(general `/g`) espacios en blanco de los archivos de una carpeta por el símbolo guión bajo (\_).
 
-    rename 's/\s+/_/' *
+    rename 's/\s+/_/g' *
 
 
 ##css
-como hacemos por diferenciar las imagenes entre paginas? un distinto fondo para cada pagina, por ejemplo...
+como hacemos por diferenciar las imágenes entre paginas? un distinto fondo para cada pagina, por ejemplo...
 
 los meta tags de ikiwiki quiza nos sirvirá. al poner el siguiente tag en index.html del manual, ikiwiki incluirá el enlace hasta la hoja de estilo <b>navigacion.css</b>
 
