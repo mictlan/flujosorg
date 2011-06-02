@@ -4,9 +4,9 @@ Como obtener información desde mi git
 --------------------------------------
 
 
-### Revisión de la bitacora de cambios
+### Revisión de la bitácora de cambios
 
-Para obtener información respecto a la bitacola podemos hacer:
+Para obtener información respecto a la bitácora podemos hacer:
 
     git log
 
@@ -15,13 +15,13 @@ Para obtener información respecto a la bitacola podemos hacer:
     Date:   Wed Jul 21 21:40:26 2010 +0000   
         comentario sobre este cambio
 
-Esto te mostrara una lista de todos los cambios al respositorio de git. Cada cambia es listado por un numero hash que identifica cada cambio que ha sido comprometido. Incluye el nombre del autor, la fecha y hora del cambio y el mensaje que fue incluido por el autor.
+Esto te mostrara una lista de todos los cambios al repositorio de **git**. Cada cambia es listado por un numero hash que identifica cada cambio que ha sido comprometido. Incluye el nombre del autor, la fecha y hora del cambio y el mensaje que fue incluido por el autor.
 
-Para ver la ultima bitacola(HEAD) podemos hacer:
+Para ver la ultima bitacola(`HEAD`) podemos hacer:
 
     git log -1
 
-### Graficación de cambios.
+### Graficacando los cambios.
 
 Podemos graficar los cambios de los brazos o ramas(branch) del como van cambiando conforme vallamos trabajando por ejemplo:
 
@@ -32,16 +32,29 @@ Podemos graficar los cambios de los brazos o ramas(branch) del como van cambiand
 
     git diff x7saz db67f
 
-Donde __db67__ corresponde a las primeras cuantos caracteres del HASH del commit mostrado arriba en la bitacorra de git (el HASH comleto siendo __db67fa8802c869ff0321fc957fe4b71c14e9bad2__) y __x7saz__ es las primeras cuantos caracteres del HASH de un commit anterior. Suena complicado pero no lo  es. Con __git log__ obtengamos toda la información necesaria. 
+Donde __db67__ corresponde a las primeras cuantos caracteres del HASH del commit mostrado arriba en la bitácora de git (el **HASH** completo siendo __db67fa8802c869ff0321fc957fe4b71c14e9bad2__) y __x7saz__ es los primeros cuatro caracteres del **HASH** de un commit anterior. Suena complicado pero no lo  es. Con __git log__ obtengamos toda la información necesaria. 
 
-    
-### Cambiar nombre de autor y correo asociado con tus cambios  
-    git config user.email "yo@server.org"</code></pre>  
-    git config user.name "yo"  
-    
-### Deshacer    
+### Cambiar nombre de autor y correo asociado con tus cambios
 
-[[!template  id=note text="""Para dishacer el cambio mas recien al index `git reset --hard HEAD`"""]]
+	git config user.email "yo@server.org"
+	git config user.name "yo"  
 
-[[!template  id=note text="""Para dishacer el ultimo commit: `git revert HEAD`"""]]
+### Configurando colores para ver las diferencias.
+
+	git config --global color.diff.old red
+	git config --global color.diff.new green
+	git config --global color.diff.func magenta
+
+### Configurar plantillas
+
+Creando una plantilla para nuestros cambios:
+	
+	git config --global commit.template $HOME/.config/git/plantilla_commit.txt
+	touch $HOME/.config/git/plantilla_commit.txt
+
+### Deshacer
+
+[[!template  id=note text="""Para deshacer el cambio mas recien al index `git reset --hard HEAD`"""]]
+
+[[!template  id=note text="""Para deshacer el ultimo commit: `git revert HEAD`"""]]
 
