@@ -23,7 +23,7 @@ Para ver la ultima bitacola(HEAD) podemos hacer:
 
 ### Graficación de cambios.
 
-Podemos graficar los brazos o ramas(branch) van cambiando conforme vallamos trabajando por ejemplo:
+Podemos graficar los cambios de los brazos o ramas(branch) del como van cambiando conforme vallamos trabajando por ejemplo:
 
     git log --graph --oneline --all
 
