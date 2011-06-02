@@ -1,24 +1,29 @@
 #Previsualicacion
-Para consevar tiempo y banda ancha podemos previsulalizar nuestros cambios localmente antes de empujarlos al servidor. Asi podemos trabjar en el wiki a largos ratiso sin necesidad comincar con el servidor hasta que queremos enviar los cambios. Atreves de la misma tencnica podemos servir nuestro repsitorio local a otros clientes atreves de redes locales o con nuestra proprio servidor en el www.
+
+Para consevar tiempo y banda ancha podemos previsulalizar nuestros cambios localmente antes de empujarlos al servidor. Asi podemos trabjar en el wiki a largos ratiso sin necesidad comunicar con el servidor hasta que queremos enviar los cambios. Atreves de la misma técnica podemos servir nuestro repositorio local a otros clientes atreves de redes locales o con nuestro propio servidor en el www.
 
 ## Prerequecitos
 
-Necesitamos git, ikiwiki y un servidor http. Y necesitamos el $FUENTE igual que necesitabamos para [[editar|edita]]. 
+Necesitamos git, ikiwiki y un servidor http. Y necesitamos el $FUENTE igual que necesitábamos para [[editar|edita]]. 
 
-ahora vamos a darles nombres a las ubicaciones del $FUENTE y la carpeta destino, onde si va a construir el html. 
+ahora vamos a darles nombres a las ubicaciones del $FUENTE y la carpeta destino, donde si va a construir el html. 
 
     FUENTE=~/wiki
     DESTINO=~/public_html/wiki
 
-ahora puedes compililar el wiki:
+ahora puedes compilar el wiki:
 
     ikiwiki --verbose $FUENTE $DESTINO --url=http://flujos.local/ --dumpsetup ikiflujos-wiki.setup
 
-el fijense que elejimos el url flujos.local, lo cual apunta a localhost en nuestra /etc/hosts. y es el nombre del domino configurado en nuestra servidor web. 
+el fijense que elegimos el **URL** `flujos.local`, lo cual apunta a _localhost_ en nuestra `/etc/hosts.` y es el nombre del domino configurado en nuestra servidor web.
 
-felicidades el html te espera en $DESTINO. es unicamente apuntar el servidor de web a ello. puede ser que algunas cosas no correspondan, mas probable por diferencias entre tu wiki.setup y la que existe en el servidor. un plugin que no esta activado por ejemplo. sensillamente abrir el `flujos-wiki.setup` en un editor de textos y altera la configuracion. 
+para asegurarnos que exista dicha configuración de `flujos.local` apuntando a nuestro _loopback_ se recomienda ejecutar como super usuario(_root_):
 
-si no existe los siguintes opciones en el .setup, agregalas:
+	grep -q -v  -E "^flujos.local" /etc/hosts &&  { echo '127.0.0.1	flujos.local' > /etc/hosts; }
+
+Felicidades el **html** te espera en $DESTINO. es únicamente apuntar el servidor de _web_ a ello. puede ser que algunas cosas no correspondan, mas probable por diferencias entre tu wiki.setup y la que existe en el servidor. un _plugin_ que no esta activado por ejemplo. sencillamente abrir el `flujos-wiki.setup` en un editor de textos y altera la configuración. 
+
+si no existe los siguientes opciones en el .setup, agregalas:
 
     rcs => 'git',
     gitorigin_branch => "",
@@ -31,12 +36,13 @@ al terminar reconstruimos el html ahora con el .setup:
 
 ### Git Wrapper
 
-`git_wrapper`, arriba configurara el git que clonado antes con un orden para actualizar  tu ikiwkiki local cada vez que compremetes un cambio (`git commit`). cambia donde dice /home/radio/flujos-wiki/ arriba para sea la el $FUENTE. de otra manera, o si no quires que git actualiza ikiwiki al hacer `commit`, puedes actualizar el wiki manualmente. o cuando hacemos un pull:
+`git_wrapper`, arriba configurara el git que clonado antes con un orden para actualizar  tu ikiwkiki local cada vez que compremetes un cambio (`git commit`). cambia donde dice /home/radio/flujos-wiki/ arriba para sea la el $FUENTE. de otra manera, o si no quieres que _git_ actualiza _ikiwiki_ al hacer `commit`, puedes actualizar el wiki manualmente. o cuando hacemos un pull:
 
     ikiwiki -setup flujos-wiki.setup -refresh
 
-tambien podemos configurar actualizacion automatica al `git-pull` con un enlace symbolico entre post-update y post-merge en la carpeta `hooks` en nuestro git.   
+También podemos configurar actualización automática al `git-pull` con un enlace simbólico entre post-update y post-merge en la carpeta `hooks` en nuestro git.
 mas ayuda sobre [[uso de ikiwiki|http://ikiwiki.info/usage/]].
 
-referencia:
-<http://ikiwiki.info/tips/laptop_wiki_with_git/>
+Referencia y mayores informes:
+
+- <http://ikiwiki.info/tips/laptop_wiki_with_git/>
