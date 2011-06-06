@@ -32,7 +32,7 @@ Podemos graficar los cambios de los brazos o ramas(branch) del como van cambiand
 
     git diff x7saz db67f
 
-## opción 2
+### opción 2
     git whatchanged x7saz db67f
 
 Donde __db67__ corresponde a las primeras cuantos caracteres del HASH del commit mostrado arriba en la bitácora de git (el **HASH** completo siendo __db67fa8802c869ff0321fc957fe4b71c14e9bad2__) y __x7saz__ es los primeros cuatro caracteres del **HASH** de un commit anterior. Suena complicado pero no lo  es. Con __git log__ obtengamos toda la información necesaria. 
