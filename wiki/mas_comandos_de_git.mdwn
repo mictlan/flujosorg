@@ -21,6 +21,50 @@ Para ver la ultima bitacola(`HEAD`) podemos hacer:
 
     git log -1
 
+### Mostrando estadísticas del G1+
+
+Modemos mostrar estadisticas de los cambios que se van realizando:
+
+	git log --stat
+
+Para mostrar las estadisticas de los ultimos 3 cambios podemos hacer:
+
+	git log --stat -3
+
+Esto mostrara una salida con tres segmentos de commits similares a:
+
+	commit fd0e4486b523e191385872535e6b350e0123d4f
+	Author: fitorec <miEmail@servidor-mails.net>
+	Date:   Mon Jun 13 11:10:37 2011 -0500
+
+		Descripcion de mi comit
+
+	 /contenidos/mas-comandos-git.md             |    10 ++++++++++
+	 .../places/{flujos-mono.jpg => flujos-mono-nuevo.jpg}   |  Bin 27979 -> 27979 bytes
+	 enOaxaca/contenidos/pages/algun-archivo.md |    2 -+
+	 3 files changed, 11 insertions(+), 1 deletions(-)
+
+
+La primer linea describe el _hash del commit_, la segunda describe el contribuidor, la tercera indica la fecha y hora de dicho commit, la linea entre saltos de lineas nos muestra la descripcion, en la parte inferior la descripcion de las modificaciones realidadas donde:
+
+**Se agregaron 10 lineas al archivo mas-comandos-git.md**
+
+	 /contenidos/mas-comandos-git.md             |    10 ++++++++++
+
+**Se renombro la imagenflujos-mono.jpg por flujos-mono-nuevo.jpg **
+
+	 .../places/{flujos-mono.jpg => flujos-mono-nuevo.jpg}   |  Bin 27979 -> 27979 bytes
+
+**Se borro y agrego una linea en algun-archivo.md **
+
+	 enOaxaca/contenidos/pages/algun-archivo.md |    2 -+
+
+**Al final de la parte inferior:**
+
+	 3 files changed, 11 insertions(+), 1 deletions(-)
+
+Nos indica que se modificaron 3 archivos, se insertaron 11lineas y se borro 1 linea.
+
 ### Graficacando los cambios.
 
 Podemos graficar los cambios de los brazos o ramas(branch) del como van cambiando conforme vallamos trabajando por ejemplo:
