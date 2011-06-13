@@ -100,11 +100,15 @@ La primer linea describe el _hash del commit_, la segunda describe el contribuid
 
 Nos indica que se modificaron 3 archivos, se insertaron 11lineas y se borro 1 linea.
 
-### Graficacando los cambios.
+### Graficando los cambios.
 
 Podemos graficar los cambios de los brazos o ramas(branch) del como van cambiando conforme vallamos trabajando por ejemplo:
 
     git log --graph --oneline --all
+
+De igual forma podemos agregarle formato y mostrar p.e. los últimos 6 cambios:
+
+    git log --pretty=format:'@%an:%h : %s' --graph -6
 
 
 ### Ver la diferencia entre dos versiones:
