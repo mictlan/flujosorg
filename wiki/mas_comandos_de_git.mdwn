@@ -35,7 +35,9 @@ Una opcion quizas mas util es dar formato a los logs para que nos muestre lo que
 
 	git log --pretty=oneline
 
-De igual forma para mostrar los ultimos 3 podemos hacer: `git log --pretty=oneline -3`
+De igual forma para mostrar los ultimos 3 podemos hacer:
+
+	git log --pretty=oneline -3
 
 ### Mostrando estadísticas del G1+
 
@@ -67,11 +69,11 @@ La primer linea describe el _hash del commit_, la segunda describe el contribuid
 
 	 /contenidos/mas-comandos-git.md             |    10 ++++++++++
 
-**Se renombro la imagenflujos-mono.jpg por flujos-mono-nuevo.jpg **
+**Se renombro la imagenflujos-mono.jpg por flujos-mono-nuevo.jpg**
 
 	 .../places/{flujos-mono.jpg => flujos-mono-nuevo.jpg}   |  Bin 27979 -> 27979 bytes
 
-**Se borro y agrego una linea en algun-archivo.md **
+**Se borro y agrego una linea en algun-archivo.md**
 
 	 enOaxaca/contenidos/pages/algun-archivo.md |    2 -+
 
