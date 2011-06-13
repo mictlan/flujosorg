@@ -39,6 +39,23 @@ De igual forma para mostrar los ultimos 3 podemos hacer:
 
 	git log --pretty=oneline -3
 
+###Formatos personalizados.
+
+Podemos personalizar nuestros salidas de logs para esto la opcion `--pretty` define un conjunto de opciones de formateo, por ejemplo demos mostrar un listado de cambios similares a:
+
+	@nombre_autor:848a13d:65 minutes ago:cambio:descripcion del commit
+
+A partir del el siguiente comando:
+
+	git log --pretty=format:'@%an:%h:%ar:cambio:%s'
+
+Nuevamente podemos combinar nuestra salida del git con alguna tuveria p.e. ordenar por autores (parecido a `git shortlog`):
+
+	git log --pretty=format:'@%an:%h  %ar, cambio: %s' -10 | sort
+
+Este ultimo comando nos muestra los 10 ultimos cambios sobre el proyecto actual, ordenados por autor y por fecha de modificación(`revisar doc como git genera sus hash`).
+
+
 ### Mostrando estadísticas del G1+
 
 Modemos mostrar estadisticas de los cambios que se van realizando:
