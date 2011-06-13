@@ -15,11 +15,27 @@ Para obtener información respecto a la bitácora podemos hacer:
     Date:   Wed Jul 21 21:40:26 2010 +0000   
         comentario sobre este cambio
 
-Esto te mostrara una lista de todos los cambios al repositorio de **git**. Cada cambia es listado por un numero hash que identifica cada cambio que ha sido comprometido. Incluye el nombre del autor, la fecha y hora del cambio y el mensaje que fue incluido por el autor.
+Esto te mostrara una lista de todos los cambios al repositorio de **git**. Cada cambio es listado por un numero hash que identifica si el dicho cambio ha ha sido comprometido. Incluye el nombre del autor, la fecha y hora del cambio y el mensaje que fue incluido por el autor.
 
 Para ver la ultima bitacola(`HEAD`) podemos hacer:
 
     git log -1
+
+###Bitacolas cortas y formatos
+
+En ocaciones es muy util revisar las bitacolas, enlistados por usuarios y los mensajes de sus commit's. esto lo podemos hacer con la opción `shortlog`:
+
+	git shortlog
+
+Para ver los ultimos `3` commits podemos hacer:
+
+	git shortlog -3
+
+Una opcion quizas mas util es dar formato a los logs para que nos muestre lo que deseamos por ejemplo, para mostrar lista simple de `hashes` sus respectivos comentarios.
+
+	git log --pretty=oneline
+
+De igual forma para mostrar los ultimos 3 podemos hacer: `git log --pretty=oneline -3`
 
 ### Mostrando estadísticas del G1+
 
