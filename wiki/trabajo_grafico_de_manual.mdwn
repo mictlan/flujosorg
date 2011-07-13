@@ -56,10 +56,23 @@ las instrucciones podrían ser:
 
 ##Uso de nombres mas semánticos.
 
-Es buena practica re-nombrar a los archivos tal que estos tengan un significado semántico(evitar 001.png, 002.png, etc..), los navegadores en las  URLs suelen suelen sustituir el espacio en blanco por '%20' lo cual en ocasiones genera urls difíciles de entender a simple vista, para evitar esto podemos renombrar todos(general `/g`) espacios en blanco de los archivos de una carpeta por el símbolo guión bajo (\_).
+Es buena practica re-nombrar a los archivos tal que estos tengan un significado semántico. Los navegadores suelen sustituir en las  _URLs_ los espacios en blanco por `%20` lo cual en ocasiones genera _URLs_ difíciles de entender a simple vista, para evitar esto podemos renombrar todos(general `/g`) espacios en blanco de los archivos de una carpeta por el símbolo guión bajo (\_).
 
     rename 's/\s+/_/g' *
 
+En Internet se entiende que se trata de enfatizar cuando se escribe en mayúsculas(similar a GRITAR!!), por tal razón se recomienda usar en la menor medida frases en mayúsculas(USAR SÓLO CUANDO SEA NECESARIO), si tenemos imagenes con estos tanto en el nombre de los archivos como en las extensiones p.e. chango_escuchando_musica.JPG, ALGO.svg,etc.PNG; las podemos renombrar al vuelo con:
+
+    rename 'y/a-z/A-Z/' *
+
+Si desea modificar solo los archivos JPG por jpg usted puede:
+
+    rename 's/\.JPG$/.jpg/g' *.JPG
+
+Si deseas jugar con **rename** sin alterar los archivos puedes usar las opciones **-n** para no modificar los archivos y **-v** para que muestre lo que realizara(modo verbose), por ejemplo el ejemplo anterior lo podemos ejecutar como:
+
+    rename -nv 's/\.JPG$/.jpg/g' *.JPG
+
+Finalmente tratar de evitar 001.png, 002.png, etc..,hay que ponerle chispa a los nombres :)
 
 ##css
 como hacemos por diferenciar las imágenes entre paginas? un distinto fondo para cada pagina, por ejemplo...
